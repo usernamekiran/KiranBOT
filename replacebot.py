@@ -756,4 +756,13 @@
 			('abcusernamekiran', 'This is a successful bot edit from toolforge cron {{p|:p}} This bot primarily runs on mrwiki. ~~~~'),
 	],
     },
+	'repair': {
+		'regex': True,
+		'nocase': True,
+		'msg': {'mr': 'शुद्धलेखन — चुका दुरुस्ती ([[सदस्य:KiranBOT II/typos|अधिक माहिती]])'},
+		'replacements': [
+			('लागवडि', 'लागवडी'),
+			('किसाठी', 'कीसाठी'),
+	],
+    },
 }
