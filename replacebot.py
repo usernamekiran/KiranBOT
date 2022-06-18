@@ -1,3 +1,5 @@
+# This file is not the actual code for replacebot, it is only the list of "find & replace" strings.
+
 {
 	'fix1': {
 		'regex': True,
@@ -747,14 +749,6 @@
 			('शकतातः', 'शकतात:'),
 			('खालीलप्रमाणेः', 'खालीलप्रमाणे:'),
         ],
-    },
-	'enwiki': {
-		'regex': True,
-		'nocase': True,
-		'msg': {'en': 'bot experiment'},
-		'replacements': [
-			('abcusernamekiran', 'This is a successful bot edit from toolforge cron {{p|:p}} This bot primarily runs on mrwiki. ~~~~'),
-	],
     },
 	'repair': {
 		'regex': True,
