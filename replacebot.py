@@ -741,10 +741,28 @@
 		'nocase': True,
 		'msg': {'mr': 'धूळपाटीवर प्रयोग'},
 		'replacements': [
-# 1 + 1 entry
+# 2 entries
 			('(?<!हिरालाल) केनिया', 'केन्या'),
 			('हिरालाल (?!केनिया)', 'हरिलाल'),
 	],
+    },
+	'enwiki': {
+		'regex': True,
+		'nocase': True,
+		'msg': {'en': 'experiment'},
+		'replacements': [
+# 2 entries
+			('abcd', 'pqrs'),
+#			('pqrs', 'abcd'),
+	],
+    },
+	'mrwiki': {
+		'regex': True,
+		'nocase': True,
+		'msg': {'mr': 'experiment'},
+		'replacements': [
+# 2 entries
+			('abcd', 'pqrs'),
+#			('pqrs', 'abcd'),
+	],
     }
-
-		
