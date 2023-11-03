@@ -136,3 +136,13 @@ with open(os.path.join(chunks_dir, f'chunk_{file_count}.xml'), 'wb') as out_file
 current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 with open(log_file, "a") as f:
     f.write(f"{file_count} output files created at {current_time}.\n")
+"""
+# Delete the dump file
+try:
+    os.remove(os.path.join(os.path.expanduser("~"), "mostrefs", "dump", "dump.xml"))
+except Exception as e:
+    with open(log_file, "a") as f:
+        f.write(f"Error while deleting dump.xml: {e}\n")
+    log_page.text += f"\n* ~~~~~ error while deleting ''dump.xml''\n"
+    log_page.save(summary='updated log — error', botflag=True, minor=True)
+"""
