@@ -94,7 +94,6 @@ for revision in revisions:
 
                             if not archive_page.exists():
                                 archive_page.text = "{{Wikipedia:In the news/Posted/Archives/header}}"
-                                
                                 archive_page.save("created archive page", minor=True, botflag=True)
                                 edit_counter += 1
                                 time.sleep(3)
@@ -143,7 +142,7 @@ for revision in revisions:
                             entry_found_previous = False
 
                             archive_lines = archive_page.text.split("\n")
-                            regex_pattern = re.compile(re.escape(text_content[:30]), re.IGNORECASE) # regardless the similarity ratio token based/fuzzy match is not effective here
+                            regex_pattern = re.compile(re.escape(text_content[:30]), re.IGNORECASE) # regardless the similarity ratio, token based/fuzzy match is not effective here
                             last_matching_index = -1
 
                             for i, line in enumerate(archive_lines):
