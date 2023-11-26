@@ -93,15 +93,8 @@ for revision in revisions:
                             archive_page = pywikibot.Page(site, archive_page_title)
 
                             if not archive_page.exists():
-                                archive_page.text = f"""<div style="padding: 5px; background: #9FE391; border: 1px solid #EC6633">
-<center>
-This page is an archive and its contents should be preserved in their current form;<br />
-Any comments regarding this page should be directed to [[Wikipedia talk:In the news]].<br />
-The relevant discussions for additions of entries to the [[Wikipedia talk:In the news]], kindly see [[Wikipedia:In the news/Candidates/{month_name} {year}]], or the previous month's page thereof. Thanks.<br />
-'''List of all archives:''' [[Wikipedia:In the news/Posted/Archives]]
-</center>
-</div>"""
-
+                                archive_page.text = "{{Wikipedia:In the news/Posted/Archives/header}}"
+                                
                                 archive_page.save("created archive page", minor=True, botflag=True)
                                 edit_counter += 1
                                 time.sleep(3)
