@@ -15,8 +15,8 @@ site = pywikibot.Site("en", "wikipedia")
 source_page = pywikibot.Page(site, "Template:In the news")
 archive_index_page_title = "Wikipedia:In the news/Posted/Archives"
 
-log_file = os.path.join(os.path.expanduser("~"), "enwiki", "itn", "itn_out.txt")
-open(log_file, "w", encoding='utf-8').close()
+log_file = os.path.join(os.path.expanduser("~"), "enwiki", "itn", "local", "itn_out.txt")
+#open(log_file, "w", encoding='utf-8').close()
 
 def format_timestamp(timestamp):
     formatted_timestamp = timestamp.strftime("%H:%M, %d %B %Y")
@@ -67,11 +67,13 @@ for revision in revisions:
             for div_element in div_elements:
                 text_content = div_element.get_text()
 
-                if not text_content.startswith("| ") and not text_content.startswith("[[Image:"):
+                #if not text_content.startswith("| ") and not text_content.startswith("[[Image:"):
+                if not (text_content.startswith("| ") or text_content.startswith(" |") or text_content.startswith("[[Image:")):
                         editor_name = revision.user
                         formatted_timestamp = format_timestamp(timestamp)
                         text_content = text_content.replace("*[[", "*'''RD''' [[").replace("* [[", "*'''RD''' [[")
                         text_content = re.sub(r'\*{{nowrap\|\[\[(.*?)\]\]}}', r"*'''RD''' [[\1]]", text_content)
+                        text_content = re.sub(r'\*{{\*mp\|(.*?)}}', r'*<!--\1-->', text_content)
                         formatted_timestamp = format_timestamp(timestamp)
 
                         date_parts = formatted_timestamp.split(", ")
@@ -89,7 +91,8 @@ for revision in revisions:
                             if not os.path.exists(archive_file):
                                 open(archive_file, "w", encoding='utf-8').close()
                                 with open(archive_file, "a", encoding='utf-8') as f:
-                                    f.write(f"{{Wikipedia:In the news/Posted/Archives/header}}\n")
+                                    #f.write(f"{{Wikipedia:In the news/Posted/Archives/header}}\n")
+                                    f.write("{{{{Wikipedia:In the news/Posted/Archives/header}}}}\n")
                                 edit_counter += 1
                                 #time.sleep(3)
 
@@ -155,7 +158,7 @@ for revision in revisions:
                             if entry_found_current:
                                 if new_revision_id_str in open(archive_file).read():
                                     continue  # Skip this revision and move to the next one
-                                update_message = f"<small>[[special:diff/{new_revision_id}|updated]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
+                                update_message = f" <small>[[special:diff/{new_revision_id}|updated]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
                                 current_month_changes.insert(last_matching_index + 1, text_content + update_message)
                             else:
                                 # check previous month's page
@@ -185,9 +188,9 @@ for revision in revisions:
                                     update_message = f" <small>[[special:diff/{new_revision_id}|added]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
                                     current_month_changes.append(text_content + update_message)
         
-        for change in current_month_changes:
-            with open(archive_file, "a", encoding="utf-8") as file:
-                file.write("\n" + change)
+        #for change in current_month_changes:
+            #with open(archive_file, "a", encoding="utf-8") as file:
+                #file.write("\n" + change)
 
         ####
         #### Process removals
@@ -205,7 +208,8 @@ for revision in revisions:
             for div_element in div_elements:
                 text_content = div_element.get_text()
 
-                if not text_content.startswith("| "):
+                #if not text_content.startswith("| "):
+                if not (text_content.startswith("| ") or text_content.startswith(" |") or text_content.startswith("[[Image:")):
                     editor_name = revision.user
                     formatted_timestamp = format_timestamp(timestamp)
 
@@ -220,6 +224,7 @@ for revision in revisions:
 
                     text_content = text_content.replace("*[[", "*'''RD''' [[").replace("* [[", "*'''RD''' [[")
                     text_content = re.sub(r'\*{{nowrap\|\[\[(.*?)\]\]}}', r"*'''RD''' [[\1]]", text_content)
+                    text_content = re.sub(r'\*{{\*mp\|(.*?)}}', r'*<!--\1-->', text_content)
 
                     # get new revision content
                     new_revision_id_str = str(new_revision_id)
@@ -238,25 +243,23 @@ for revision in revisions:
                     archive_file = os.path.join(os.path.expanduser("~"), "enwiki", "itn", "local", "archives", f"{month_name} {year}.txt")
                     regex_pattern = re.compile(re.escape(text_content[:match_length]), re.IGNORECASE)
                     last_matching_index = -1
-                    
+
                     with open(archive_file, "r", encoding="utf-8") as file:
                         archive_lines = file.read().split("\n")
 
                     for i, line in enumerate(archive_lines):
                         if regex_pattern.search(line):
-                            last_matching_index = i 
+                            last_matching_index = i
 
                     if last_matching_index != -1:
-                        update_message = f" <small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
+                        update_message = f"<small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
                         if text_content.startswith("*'''RD''' [["):
                             if last_matching_index < len(archive_lines):
                                 archive_lines[last_matching_index] += update_message
                         else:
                             archive_lines.insert(last_matching_index + 1, f"{text_content} {update_message}")
-
                         with open(archive_file, "w", encoding="utf-8") as file:
                             file.write("\n".join(archive_lines))
-
                         current_month_changes.append(text_content)
                     else:
                         prev_month = timestamp - relativedelta(months=1)
@@ -274,7 +277,7 @@ for revision in revisions:
                                     last_matching_index_prev = i
 
                             if last_matching_index_prev != -1:
-                                update_message = f" <small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
+                                update_message = f"<small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
                                 if text_content.startswith("*'''RD''' [["):
                                     if last_matching_index_prev < len(prev_archive_lines):
                                         prev_archive_lines[last_matching_index_prev] += update_message
@@ -282,40 +285,39 @@ for revision in revisions:
                                     prev_archive_lines.insert(last_matching_index_prev + 1, f"{text_content} {update_message}")
                             else:
                                 # If the removed entry is not found in both the current and the previous archive pages
-                                update_message = f" <small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
-                                with open(archive_file, "a", encoding="utf-8") as file:
-                                    file.write("\n" + f"{text_content} {update_message}")
+                                update_message = f"<small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
+                                current_month_changes.append(f"{text_content} {update_message}")
 
                             with open(prev_archive_file, "w", encoding="utf-8") as file:
                                 file.write("\n".join(prev_archive_lines))
+                        else:
+                            # If the removed entry is not found in both the current and the previous archive pages
+                            update_message = f"<small>[[special:diff/{new_revision_id}|removed]] by [[User:{editor_name}|{editor_name}]], {formatted_timestamp}</small>"
+                            current_month_changes.append(f"{text_content} {update_message}")
 
-                        current_month_changes.append(text_content)
-
-                    # Save the changes to local files
-
+        # Save the changes to local files
         if current_month_changes:
             with open(archive_file, "a", encoding="utf-8") as file:
                 for change in current_month_changes:
                     file.write("\n" + change)
             edit_counter += 1
-            #time.sleep(3)
+            # time.sleep(3)
 
         if prev_month_changes:
             with open(prev_archive_file, "a", encoding="utf-8") as file:
                 for change in prev_month_changes:
                     file.write("\n" + change)
             edit_counter += 1
-            #time.sleep(3)
-
-
-        #if edit_counter % 10 == 0:
-            #time.sleep(5)
-            #edit_counter = 0
+            # time.sleep(3)
 
         if edit_counter >= 50:
-            sys.exit()
+            sys.exit()  # Exit the script
 
     except Exception as e:
-        print(f"Error: {e}")
+        #print(f"Error: {e}")
         with open(log_file, "a") as f:
-            f.write(f"{e}")
+            f.write(f"* {e}\n")
+
+current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+with open(log_file, "a") as f:
+    f.write(f"* exiting, {edit_counter} total edits at {current_time}.")
