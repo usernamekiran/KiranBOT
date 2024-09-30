@@ -10,19 +10,9 @@ To use the Python programs/scripts, you will need to have Pywikibot installed. F
 ## Usage
 
 ### Pywikibot
-Pywikibot can be used on any MediaWiki website, including over **300** language editions of Wikipedia. The top three largest Wikipedias by the number of articles are:
+Pywikibot can be used on any MediaWiki website, including over **300** language editions of Wikipedia. Like English Wikipedia, Cebuano Wikipedia, and German Wikipedia.
 
-1. **English Wikipedia** - Over 6 million articles
-2. **Cebuano Wikipedia** - Over 5 million articles (notably high due to bot contributions)
-3. **German Wikipedia** - Over 2.7 million articles
-
-In addition to Wikipedia, Pywikibot can also be used on other MediaWiki sites such as:
-
-- Wikimedia Commons
-- Wiktionary
-- Wikidata
-- Wikiquote
-- and many others
+In addition to Wikipedia, Pywikibot can also be used on other MediaWiki sites such as Wikimedia Commons, Wiktionary, Wikidata, Wikiquote, among many others
 
 To use Pywikibot, kindly refer to the official [Pywikibot manual](https://www.mediawiki.org/wiki/Manual:Pywikibot/Installation) for detailed instructions on running scripts from your computer or server.
 
