@@ -3,16 +3,23 @@ import os
 import re
 import sys
 import time
+import traceback
 from bs4 import BeautifulSoup
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 from fuzzywuzzy import fuzz
 
-# final version. works perfectly on all fronts. but sometimes doesnt capture a line if there are many actions in the same revision.
+# server version
 
 site = pywikibot.Site("en", "wikipedia")
 source_page = pywikibot.Page(site, "Template:In the news")
 archive_index_page_title = "Wikipedia:In the news/Posted/Archives"
+
+control_page = pywikibot.Page(site, "User:KiranBOT/shutoff/ITN")
+# check for run
+control_page_text = control_page.text.lower()  # Fetch page content and convert to lowercase for case-insensitive search
+if "* run" not in control_page_text:
+    sys.exit()
 
 log_file = os.path.join(os.path.expanduser("~"), "enwiki", "itn", "itn_log.txt")
 #open(log_file, "w", encoding='utf-8').close()
@@ -301,5 +308,5 @@ for revision in revisions:
     except Exception as e:
         current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         with open(log_file, "a") as f:
-            f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] Error processing revision {new_revision_id}: {e}\n")
+            f.write(f"[{current_time}] Error processing revision {new_revision_id}: {e}\n")
             f.write(traceback.format_exc() + "\n")
