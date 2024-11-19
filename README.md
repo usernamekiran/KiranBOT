@@ -25,17 +25,6 @@ AWB is primarily used for editing Wikipedia and other MediaWiki sites. It provid
 
 To use AWB, kindly refer to the official [AWB manual](https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser/User_manual) for detailed instructions. Howevever, unlike pywikibot AWB runs only from your computer, and not from a server.
 
-## Contributing
-
-If you want to contribute to this repository, kindly follow these steps:
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes.
-4. Commit your changes (`git commit -m 'Add new feature'`).
-5. Push to the branch (`git push origin feature-branch`).
-6. Open a pull request.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](https://github.com/usernamekiran/KiranBOT/blob/main/LICENSE) file for details.
