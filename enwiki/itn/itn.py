@@ -67,7 +67,7 @@ for revision in revisions:
                 text_content = div_element.get_text()
 
                 if not any(text_content.startswith(prefix) for prefix in [
-                        "| ", "|", " |", "[[Image:", "| image", "| width", "| caption", "| title", "| link",
+                        "| ", "|", " |", "[[Image:", "[[Category:", "| image", "| width", "| caption", "| title", "| link",
                         "| border", "| caption align", "<!--"]):
                     # Check if the text contains |timeline and handle it separately
                     if "|timeline" in text_content or "|Timeline" in text_content:
@@ -208,7 +208,7 @@ for revision in revisions:
                 text_content = div_element.get_text()
 
                 if not any(text_content.startswith(prefix) for prefix in [
-                        "| ", "|", " |", "[[Image:", "| image", "| width", "| caption", "| title", "| link",
+                        "| ", "|", " |", "[[Image:", "[[Category:", "| image", "| width", "| caption", "| title", "| link",
                         "| border", "| caption align", "<!--"]):
 
                     # Check if the text contains |timeline and handle it separately
