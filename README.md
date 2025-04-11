@@ -1,6 +1,12 @@
 # Programs utilised by [KiranBOT](https://en.wikipedia.org/wiki/User:KiranBOT), and [KiranBOT II](https://en.wikipedia.org/wiki/User:KiranBOT_II)
 
-## About
+## About KiranBOT(s)
+There are two separate bot accounts: KiranBOT, and KiranBOT II.<br />
+KiranBOT II has only one task on Marathi Wikipedia: spell-check.<br />
+Whereas KiranBOT has multiple tasks on English Wikipedia, and Marathi Wikipedia.<br />
+KiranBOT also has a task of **updating AMP URLs to their canonical versinos**. This task is operational on multiple Wikipedias. 
+
+## About the repository
 This repository contains the main programs/scripts for the [Pywikibot](https://www.mediawiki.org/wiki/Manual:Pywikibot) and [AutoWiki Browser](https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser) (AWB). It does not include the framework or other background files.
 
 ## Installation
