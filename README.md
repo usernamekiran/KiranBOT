@@ -15,7 +15,7 @@ To use the Python programs/scripts, you will need to have Pywikibot installed. F
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/usernamekiran/KiranBOT/blob/main/LICENSE) file for details.
+This project is licensed under the **GNU General Public License v3.0** - see the [LICENSE](https://github.com/usernamekiran/KiranBOT/blob/main/LICENSE) file for details.
 
 ## Acknowledgements
 
