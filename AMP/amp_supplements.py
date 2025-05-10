@@ -54,7 +54,7 @@ skip_url_patterns = [
         "ramp.com", "hipstamp.com", "rosekamp.dk",
         "numistamp.com", "vamp.org", "idolchamp.com",
         "mysticstamp.com", "pleinchamp.com", "sanskrit-lamp.org",
-        "ghanamps.com",
+        "ghanamps.com", "tradjazzcamp.com",
     ]
 ]
            
@@ -76,15 +76,24 @@ skippable_words = {
     "amphan", "amphibian", "heitkamp",
 }
 
+archive_url_patterns = [
+    # archive-url variations
+    # covers de, en, es, fr, it, pl, pt, ar, nl, fi, eu, ast,
+    r'(\|\s*(archive-url|مسار أرشيف|مسار الأرشيف|archiveurl|urlarchivo|archiwum|archiv-url|urlarchivio|urlarquivo|arquivourl|arquivo-url|archiefurl|valinnainen|artxibo-url|urlarchivu)\s*=\s*)(https?://[^\s|]+)',
+
+    # Match {{Webarchive | url= ... }} templates with variations
+    r'(\{\{\s*Webarchive\s*\|\s*url\s*=\s*)(https?://[^\s|]+)',
+]
+
 def get_wiki_sites():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
     "en", "de", "es", "fr", "it", "pl", "pt",
     "ab", "ace", "ady", "af", "am", "an", "ang", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay", "az", "azb",
-    "ca", "ce", "eu", "fa", "fi", "hu", "id", "ms", "nl", "sv", "tt", "war", "zh-min-nan"
+    "ca", "ce", "eu", "fa", "fi", "hu", "nl", "tt", "war", "zh-min-nan",
     "ceb", "hi",
 ]}
 
-# temporaily removed: "ami"
+# temporaily removed: "ami", "id", ms, sv,  = not clear about global bot.
 
 # dictionary of edit summaries for each wikipedia language
 default_summary = "removed AMP tracking from URLs ([[:en:User:KiranBOT/AMP|details]]) ([[:en:User talk:Usernamekiran|report error]]) v2.2.5r"
@@ -117,6 +126,20 @@ edit_summaries = {
     "ay": "AMP-Tracking URLs qhanqʼa ([[:en:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|error reporte]]) v2.2.5r",
     "az": "AMP-Tracking URL-lərdən çıxarıldı ([[:en:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|xətanı bildirmək]]) v2.2.5r",
     "azb": "AMP-Tracking URL-lərdən qaldırıldı ([[:en:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|səhv bildirmək]]) v2.2.5r",
+    "ca": "Eliminació del seguiment AMP de les URL ([[:en:User:KiranBOT/AMP|detalls]]) ([[User talk:Usernamekiran|informeu d'errors]]) v2.2.5r",
+    "ce": default_summary,
+    "eu": "AMP jarraipena URLetatik kendu da ([[:en:User:KiranBOT/AMP|xehetasunak]]) ([[User talk:Usernamekiran|errorea jakinarazi]]) v2.2.5r",
+    "fa": "حذف ردیابی AMP از URLها ([[:en:User:KiranBOT/AMP|جزئیات]]) ([[User talk:Usernamekiran|گزارش خطا]]) v2.2.5r",
+    "fi": "AMP-seuranta poistettu URL-osoitteista ([[:en:User:KiranBOT/AMP|yksityiskohdat]]) ([[User talk:Usernamekiran|ilmoita virheestä]]) v2.2.5r",
+    "hu": "AMP-követés eltávolítva az URL-ekből ([[:en:User:KiranBOT/AMP|részletek]]) ([[User talk:Usernamekiran|hibabejelentés]]) v2.2.5r",
+    "id": "Pelacakan AMP dihapus dari URL ([[:en:User:KiranBOT/AMP|rincian]]) ([[User talk:Usernamekiran|laporkan kesalahan]]) v2.2.5r",
+    "ms": "Penjejakan AMP telah dialih keluar dari URL ([[:en:User:KiranBOT/AMP|butiran]]) ([[User talk:Usernamekiran|laporkan ralat]]) v2.2.5r",
+    "sv": "AMP-spårning borttagen från URL:er ([[:en:User:KiranBOT/AMP|detaljer]]) ([[User talk:Usernamekiran|rapportera fel]]) v2.2.5r",
+    "tl": "inalis ang pagsubaybay sa AMP sa mga URL ([[:en:User:KiranBOT/AMP|mga detalye]]) ([[User talk:Usernamekiran|mag-ulat ng error]]) v2.2.5r",
+    "tt": default_summary,
+    "war": default_summary,
+    "zh-min-nan": default_summary,
+    "nl": "AMP-tracking uit URL's verwijderd ([[:en:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|fout melden]]) v2.2.5r",
     "ceb": "Gitangtang ang AMP tracking gikan sa mga URL ([[:en:User:KiranBOT/AMP|detalye]]) ([[User talk:Usernamekiran|reporta ang sayop]]) v2.2.5r",
     "hi": "AMP-Tracking को URLs से हटाया गया ([[:en:User:KiranBOT/AMP|विवरण]]) ([[User talk:Usernamekiran|त्रुटि दर्ज करें]]) v2.2.5r",
 }
