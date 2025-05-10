@@ -85,6 +85,11 @@ archive_url_patterns = [
     r'(\{\{\s*Webarchive\s*\|\s*url\s*=\s*)(https?://[^\s|]+)',
 ]
 
+def get_small_wikis():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+    "ady", "arc", "ang", "ace", "am", "ab", "an",
+]}
+
 def get_wiki_sites():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
     "en", "de", "es", "fr", "it", "pl", "pt",
