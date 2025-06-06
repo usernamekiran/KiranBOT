@@ -6,17 +6,19 @@ import re
 skip_url_patterns = [
     rf"^https?://(?:[\w.-]+\.)?{re.escape(domain)}(/.*)?$"
     for domain in [
-        "wikipedia.org", 
+        "wikipedia.org",
+        "books.google.com", "news.google.com",
+        "legacy.com",
         "amp.dev", "amp.org.br", "amp.pt",
         "larepublica-pe.cdn.ampproject.org",
         "acacamps.org", "asburyamp.org", "ampcapital.com"
         "angelscamp.gov", "amprofon.com", "amprofon.com.mx",
         "archive.is", "archive.ph", "archive.today",
-        "astronomycamp.org", "astrocamp.org", "australianstamp.com",
-        "bandcamp.com", "bamp.fr", "barrysbootcamp.com",
+        "astronomycamp.org", "astrocamp.org", "australianstamp.com", "bandcamp.com", "bamp.fr",
+        "barrysbootcamp.com",
         "bengalscamp.com", "biancabeauchamp.com", "bitstamp.net",
         "boamp.fr", "breckelenkamp.nl", "bridgechamp.com",
-        "caamp.org", "camptocamp.com", 
+        "caamp.org", "camptocamp.com", "christerhamp.se",
         "camp.pt.vu", "camp.tx", "camp.ucss.edu.pe",
         "camptocamp.org", "cclamp.radioandrecords.com", "chaclascamp.com",
         "champ.org.uk", "championscamp.pl", "danbeard.org",
@@ -41,7 +43,7 @@ skip_url_patterns = [
         "ucr.edu", "unicamp.br", "unicamp.org",
         "vzwamp.com", "ville-guingamp.fr", "waltercamp.org",
         "wardsauto.com", "webamp.org", "webcitation.org",
-        "winamp.com",
+        "winamp.com", "wadehamptoncamp.org",
         "yardbarker.com", "zoutkamp.net", "delcamp.cat",
         "anthonyjcamp.com", "lamaimuaythaicamp.com", "wisebigmancamp.com",
         "pricecamp.org", "revolutioncamp.it", "sturdycamp.com",
@@ -54,26 +56,67 @@ skip_url_patterns = [
         "ramp.com", "hipstamp.com", "rosekamp.dk",
         "numistamp.com", "vamp.org", "idolchamp.com",
         "mysticstamp.com", "pleinchamp.com", "sanskrit-lamp.org",
-        "ghanamps.com", "tradjazzcamp.com",
+        "ghanamps.com", "tradjazzcamp.com", "mariekenijkamp.com",
+        "cybercamp.es", "linecamp.com", "reebokabcdcamp.com",
+        "lsamp.neu.edu", "andrew-reynolds-bootcamp.com",
+        "rawramp.me", "skycamp.pl", "campaignlive.co.uk",
+        "snowcamp.org", "voteforshamp.com", "facamp.com.br",
+        "puccamp.br", "policamp.edu.br", "gavinstamp.co.uk",
+        "ceciliastamp.com", "agnesstamp.com", "greatswamp.org",
+        "supertramp.com", "apramp.org", "portofinoamp.it",
+        "marinalystcamp.dk", "vestbirk.dk-camp.dk", "rduchamp.fr",
+        "barcamp.org", "thomasroewekamp.de", "handstamp.com",
+        "agemcamp.sp.gov.br", "openwebcamp.com", "grovedaycamp.com",
+        "artsurfcamp.com", "rccamp.org", "jz-kamp.de",
+        "nystamp.org", "aiamp.info", "usana-amp.com",
+        "eaguingamp.com", "angelscamp.gov", "anthonycamp.com",
+        "academystamp.com", "buddhiststamp.com", "metalcamp.com",
+        "gnulamp.com", "mountainstamp.com", "freecodecamp.org",
+        "horschamp.org", "bueschelskamp.de", "thorpecamp.org.uk",
+        "droverscamp.com.au", "mainefiddlecamp.org", "a-camp.org",
+        "greentourismcamp.com", "amp.acdh.oeaw.ac.at", "devbootcamp.com",
+        "euro.dayfr.com", "amp.gov.al", "eaguingamp.com",
+        "hamiltoncamp.com", "unicamp.academia.edu", "zachwamp.com",
+        "maasaicamp.com", "profcamp.tripod.com", "muschamp.org.uk",
+        "artistcamp.com", "museumparkharskamp.nl", "maamp.us",
+        "pacamp.com", "davidkamp.com", "climbcamp.fr",
+        "rentocamp.com", "conventioncamp.de", "chinesestamp.org",
+        "laselvadelcamp.org", "bohemiamp.cz", "salsacamp.de",
+        "kingswamp.com", "zamp.hr", "themusicswamp.com",
+        "cripcamp.com", "caamp.info", "wanhuamp.com",
+        "swamp.org", "nyscamp.org", "aberdaroncamp.com",
+        "comparecamp.com", "knowyourrightscamp.com", "perlmancamp.org",
+        "svjappenkamp.nl", "iamp.org", "swamp.osu.edu",
+        "yag-hamacamp.main.jp", "midwestbanjocamp.com", "revolutioncamp.it",
+        "wellcamp.com.au", "datamp.org", "balisurfingcamp.com",
+        "wwe.com", "swissinfo.ch", "trueofvamp.dreamful.org",
+        "spacamp.net", "klimacamp.fridaysforfuture.berlin", "attheamp.com",
+        "ramonchamp.fr", "transvisionvamp.com", "eys-workcamp.de",
+        "hipcamp.com", "mowjcamp.ws", "kitchenercamp.co.uk",
+        "ecocamp.travel", "arthellcoalcamp.com", "longchamp.com",
+        "vahrenkamp.org", "fineartscamp.org", "ggslangekamp.de",
+        "kgs-meerkamp.de", "gs-amrosenkamp.de", "ggs-blumenkamp.de",
+        "grundschule-heidkamp.de", "kgs-eikamp.de", "ggs-alten-kamp.bobi.net",
+        "grundschule-kuhlerkamp.de", "gymnasium-rheinkamp.de", "beisenkamp.eu", "schule-am-buschkamp.de", "annehartkamp.de",
     ]
 ]
-           
 
-# http://blog.yag-hamacamp.main.jp/?eid=341 
 exact_skip_urls = [
     # exact matches for the URLs to skip (with or without www)
     r"^https?://(?:www\.)?wdwinfo\.com/news-stories/amp-suit-decorated-with-holiday-theming-at-disneys-animal-kingdom/$",
-    r"^https?://(?:www\.)?swissinfo\.ch/spa/las--fake-news--amplifican-el-miedo-y-la-confusi%C3%B3n-en-hong-kong/45380788$",
     r"^https?://(?:www\.)?padua-access\.stuttgart\.de/Access\.xhtml\?.*$",
     r"^https?://(?:www\.)?adelaidenow\.com\.au/business/sa-business-journal/didier-elzingas-billion-dollar-tech-company-culture-amp-wants-to-make-work-better-for-all-of-us/news-story/265491a4c82d9aa9e4c5215b30320e13$",
-]
+    r"^https?://(?:www\.)?foreign\.go\.tz/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
+    r"^https?://(?:www\.)?foreign\.go\.tz/index\.php/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
 
+]
 
 # Set of words to check for skipping
 skippable_words = {
     "amplio", "ampel", "ampersand",
     "ampproject", "amp-project", "webarchive",
     "amphan", "amphibian", "heitkamp",
+    "basecamp", "amphitheater",
 }
 
 archive_url_patterns = [
@@ -81,70 +124,122 @@ archive_url_patterns = [
     # covers de, en, es, fr, it, pl, pt, ar, nl, fi, eu, ast,
     r'(\|\s*(archive-url|مسار أرشيف|مسار الأرشيف|archiveurl|urlarchivo|archiwum|archiv-url|urlarchivio|urlarquivo|arquivourl|arquivo-url|archiefurl|valinnainen|artxibo-url|urlarchivu)\s*=\s*)(https?://[^\s|]+)',
 
-    # Match {{Webarchive | url= ... }} templates with variations
-    r'(\{\{\s*Webarchive\s*\|\s*url\s*=\s*)(https?://[^\s|]+)',
+    # match {{Webarchive | url= ... }} templates with variations
+    #r'(\{\{\s*Webarchive\s*\|\s*url\s*=\s*)(https?://[^\s|]+)', # this is now covered in main script
+
+    # urls that embed another URL after a slash
+    r'(https?://[^\s|]*?/https?://[^\s|]+)',
 ]
+
+def get_single_wiki():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+    "ta",
+]}
 
 def get_small_wikis():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
-    "ady", "arc", "ang", "ace", "am", "ab", "an",
+    "ady", "arc", "ang", "ab", "ace", "am", "an",
 ]}
 
 def get_wiki_sites():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
     "en", "de", "es", "fr", "it", "pl", "pt",
-    "ab", "ace", "ady", "af", "am", "an", "ang", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay", "az", "azb",
-    "ca", "ce", "eu", "fa", "fi", "hu", "nl", "tt", "war", "zh-min-nan",
-    "ceb", "hi",
-]}
+    "ab", "ace", "ady", "af", "am", "ami", "an", "ang", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay",
+    "be", "bg", "ca", "ce", "ceb", "cs", "cy", "da", "el", "eo", "eu", "eo", "et", "fa", "fi", "he", "hi", "hr", "hu", "hy", "id", "ka", "kk", "ko", "ku",
+    "la", "lld", "lt", "lv", "mk", "min", "ms", "my", "nl", "nn", "oc", "sh", "si", "simple", "sk", "sl", "sq", "sv", "sw", "ta", "te", "tg", "th", "tl", "tt", "uz", "war", "zh-min-nan",
 
-# temporaily removed: "ami", "id", ms, sv,  = not clear about global bot.
+]} #be-tarask, br, ml,
+
+# temporarily paused: "bs"
+# temporarily halted: tr, az, azb
 
 # dictionary of edit summaries for each wikipedia language
-default_summary = "removed AMP tracking from URLs ([[:en:User:KiranBOT/AMP|details]]) ([[:en:User talk:Usernamekiran|report error]]) v2.2.5r"
+default_summary = "removed AMP tracking from URLs ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|report error]]) v2.2.7s"
 
 edit_summaries = {
     "en": default_summary,
-    "de": "Bot: AMP-Tracking aus URLs entfernt ([[:en:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|Fehler melden]]) v2.2.5r",
-    "es": "eliminación del seguimiento AMP en URLs ([[:en:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|reportar error]]) v2.2.5r",
-    "fr": "suppression du suivi AMP dans les URLs ([[:en:User:KiranBOT/AMP|détails]]) ([[User talk:Usernamekiran|signaler une erreur]]) v2.2.5r",
-    "it": "rimosso il tracciamento AMP dagli URL ([[:en:User:KiranBOT/AMP|dettagli]]) ([[Discussioni utente:Usernamekiran|segnala errore]]) v2.2.5r",
-    "pl": "Usunięto śledzenie AMP z adresów URL ([[:en:User:KiranBOT/AMP|szczegóły]]) ([[User talk:Usernamekiran|zgłoś błąd]]) v2.2.5r",
-    "pt": "BOT: remoção do rastreamento AMP das URLs ([[:en:User:KiranBOT/AMP|detalhes]]) ([[User talk:Usernamekiran|reportar erro]]) v2.2.5r",
-    "ab": "Ианыхуп AMP ашьҭаԥшра URL аҟынтәи ([[:en:User:KiranBOT/AMP|ахәҭаҷқәа]]) ([[User talk:Usernamekiran|aгха аҳасабырба]]). v2.2.5r",
-    "ace": "Peulacak AMP ka geubôh nibak URL ([[:en:User:KiranBOT/AMP|detil]]) ([[User talk:Usernamekiran|lapor kasalahan]]) v2.2.5r",
+    "de": "Bot: AMP-Tracking aus URLs entfernt ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|Fehler melden]]) v2.2.7s",
+    "es": "eliminación del seguimiento AMP en URLs ([[:m:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|reportar error]]) v2.2.7s",
+    "fr": "suppression du suivi AMP dans les URLs ([[:m:User:KiranBOT/AMP|détails]]) ([[User talk:Usernamekiran|signaler une erreur]]) v2.2.7s",
+    "it": "rimosso il tracciamento AMP dagli URL ([[:m:User:KiranBOT/AMP|dettagli]]) ([[Discussioni utente:Usernamekiran|segnala errore]]) v2.2.7s",
+    "pl": "Usunięto śledzenie AMP z adresów URL ([[:m:User:KiranBOT/AMP|szczegóły]]) ([[User talk:Usernamekiran|zgłoś błąd]]) v2.2.7s",
+    "pt": "BOT: remoção do rastreamento AMP das URLs ([[:m:User:KiranBOT/AMP|detalhes]]) ([[User talk:Usernamekiran|reportar erro]]) v2.2.7s",
+    "ab": "Ианыхуп AMP ашьҭаԥшра URL аҟынтәи ([[:m:User:KiranBOT/AMP|ахәҭаҷқәа]]) ([[User talk:Usernamekiran|aгха аҳасабырба]]). v2.2.7s",
+    "ace": "Peulacak AMP ka geubôh nibak URL ([[:m:User:KiranBOT/AMP|detil]]) ([[User talk:Usernamekiran|lapor kasalahan]]) v2.2.7s",
     "ady": default_summary,
-    "af": "het AMP-opsporing van URL'e verwyder ([[:en:User:KiranBOT/AMP|besonderhede]]) ([[User talk:Usernamekiran|rapporteer fout]]) v2.2.5r",
-    "am": "የAMP ክትትልን ከዩአርኤሎች ተወግዷል ([[:en:User:KiranBOT/AMP|ዝርዝሮች]]) ([[User talk:Usernamekiran|ስህተት ሪፖርት አድርግ]]) v2.2.5r",
+    "af": "het AMP-opsporing van URL'e verwyder ([[:m:User:KiranBOT/AMP|besonderhede]]) ([[User talk:Usernamekiran|rapporteer fout]]) v2.2.7s",
+    "am": "የAMP ክትትልን ከዩአርኤሎች ተወግዷል ([[:m:User:KiranBOT/AMP|ዝርዝሮች]]) ([[User talk:Usernamekiran|ስህተት ሪፖርት አድርግ]]) v2.2.7s",
     "ami": default_summary,
     "an": default_summary,
-    "ang": "afscerod AMP-tracking from URLs ([[:en:User:KiranBOT/AMP|dǣl]]) ([[User talk:Usernamekiran|forwyrd-an eor]]) v2.2.5r",
-    "ar": "إزالة تتبع AMP من عناوين URL ([[:en:User:KiranBOT/AMP|التفاصيل]]) ([[نقاش المستخدم:Usernamekiran|خطأ في الإبلاغ]]) v2.2.5r",
-    "arc": "AMP-Tracking ܡܢ URLs ܡܢܝܬ ([[:en:User:KiranBOT/AMP|ܐܢܬܐ]]) ([[User talk:Usernamekiran|ܐܙܠ ܕܠܝܠ]]) v2.2.5r",
-    "arz": "AMP-Tracking mn URLs itfrrdu ([[:en:User:KiranBOT/AMP|tafaṣṣīl]]) ([[User talk:Usernamekiran|tārīkh ϻałʿūṭ]]) v2.2.5r",
-    "as": "AMP-Tracking URLs ৰ পৰা আঁতৰোৱা হৈছে ([[:en:User:KiranBOT/AMP|বিশদ]]) ([[User talk:Usernamekiran|ভুল প'ৰিবেশ]]) v2.2.5r",
-    "ast": "AMP-Tracking fuera de URLs retirado ([[:en:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|denunciar error]]) v2.2.5r",
-    "atj": "AMP-Tracking URL hite eskeri ([[:en:User:KiranBOT/AMP|detaylar]]) ([[User talk:Usernamekiran|hata raporlama]]) v2.2.5r",
-    "av": "AMP-Tracking URL-lär hanalhiy ([[:en:User:KiranBOT/AMP|tağlar]]) ([[User talk:Usernamekiran|hataları raporlama]]) v2.2.5r",
-    "avk": "AMP-Tracking URLs dan girlemişti ([[:en:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|hatalar bildirin]]) v2.2.5r",
-    "awa": "AMP-Tracking URLs se hatawā chiṭi ([[:en:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|bug report]]) v2.2.5r",
-    "ay": "AMP-Tracking URLs qhanqʼa ([[:en:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|error reporte]]) v2.2.5r",
-    "az": "AMP-Tracking URL-lərdən çıxarıldı ([[:en:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|xətanı bildirmək]]) v2.2.5r",
-    "azb": "AMP-Tracking URL-lərdən qaldırıldı ([[:en:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|səhv bildirmək]]) v2.2.5r",
-    "ca": "Eliminació del seguiment AMP de les URL ([[:en:User:KiranBOT/AMP|detalls]]) ([[User talk:Usernamekiran|informeu d'errors]]) v2.2.5r",
+    "ang": "afscerod AMP-tracking from URLs ([[:m:User:KiranBOT/AMP|dǣl]]) ([[User talk:Usernamekiran|forwyrd-an eor]]) v2.2.7s",
+    "ar": "إزالة تتبع AMP من عناوين URL ([[:m:User:KiranBOT/AMP|التفاصيل]]) ([[نقاش المستخدم:Usernamekiran|خطأ في الإبلاغ]]) v2.2.7s",
+    "arc": "AMP-Tracking ܡܢ URLs ܡܢܝܬ ([[:m:User:KiranBOT/AMP|ܐܢܬܐ]]) ([[User talk:Usernamekiran|ܐܙܠ ܕܠܝܠ]]) v2.2.7s",
+    "arz": "AMP-Tracking mn URLs itfrrdu ([[:m:User:KiranBOT/AMP|tafaṣṣīl]]) ([[User talk:Usernamekiran|tārīkh ϻałʿūṭ]]) v2.2.7s",
+    "as": "AMP-Tracking URLs ৰ পৰা আঁতৰোৱা হৈছে ([[:m:User:KiranBOT/AMP|বিশদ]]) ([[User talk:Usernamekiran|ভুল প'ৰিবেশ]]) v2.2.7s",
+    "ast": default_summary,
+    "atj": "AMP-Tracking URL hite eskeri ([[:m:User:KiranBOT/AMP|detaylar]]) ([[User talk:Usernamekiran|hata raporlama]]) v2.2.7s",
+    "av": "AMP-Tracking URL-lär hanalhiy ([[:m:User:KiranBOT/AMP|tağlar]]) ([[User talk:Usernamekiran|hataları raporlama]]) v2.2.7s",
+    "avk": "AMP-Tracking URLs dan girlemişti ([[:m:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|hatalar bildirin]]) v2.2.7s",
+    "awa": "AMP-Tracking URLs se hatawā chiṭi ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|bug report]]) v2.2.7s",
+    "ay": "AMP-Tracking URLs qhanqʼa ([[:m:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|error reporte]]) v2.2.7s",
+    "az": "AMP-Tracking URL-lərdən çıxarıldı ([[:m:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|xətanı bildirmək]]) v2.2.7s",
+    "azb": "AMP-Tracking URL-lərdən qaldırıldı ([[:m:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|səhv bildirmək]]) v2.2.7s",
+    "be": "выдалена адсочванне AMP з URL-адрасоў ([[:m:User:KiranBOT/AMP|падрабязнасці]]) ([[User talk:Usernamekiran|паведаміць пра памылку]]) v2.2.7s",
+    "be-tarask": "выдалена адсочванне AMP з URL-адрасоў ([[:m:User:KiranBOT/AMP|падрабязнасці]]) ([[User talk:Usernamekiran|паведаміць пра памылку]]) v2.2.7s",
+    "bg": "премахнато е AMP проследяване от URL адреси ([[:m:User:KiranBOT/AMP|подробности]]) ([[User talk:Usernamekiran|докладвай грешка]]) v2.2.7s",
+    "br": "tennet eo bet an heuliañ AMP diouzh an URLoù ([[:m:User:KiranBOT/AMP|munudoù]]) ([[User talk:Usernamekiran|kemenn ur fazi]]) v2.2.7s",
+    "bs": "uklonjeno AMP praćenje iz URL-ova ([[:m:User:KiranBOT/AMP|detalji]]) ([[User talk:Usernamekiran|prijavi grešku]]) v2.2.7s",
+    "ca": "Eliminació del seguiment AMP de les URL ([[:m:User:KiranBOT/AMP|detalls]]) ([[User talk:Usernamekiran|informeu d'errors]]) v2.2.7s",
     "ce": default_summary,
-    "eu": "AMP jarraipena URLetatik kendu da ([[:en:User:KiranBOT/AMP|xehetasunak]]) ([[User talk:Usernamekiran|errorea jakinarazi]]) v2.2.5r",
-    "fa": "حذف ردیابی AMP از URLها ([[:en:User:KiranBOT/AMP|جزئیات]]) ([[User talk:Usernamekiran|گزارش خطا]]) v2.2.5r",
-    "fi": "AMP-seuranta poistettu URL-osoitteista ([[:en:User:KiranBOT/AMP|yksityiskohdat]]) ([[User talk:Usernamekiran|ilmoita virheestä]]) v2.2.5r",
-    "hu": "AMP-követés eltávolítva az URL-ekből ([[:en:User:KiranBOT/AMP|részletek]]) ([[User talk:Usernamekiran|hibabejelentés]]) v2.2.5r",
-    "id": "Pelacakan AMP dihapus dari URL ([[:en:User:KiranBOT/AMP|rincian]]) ([[User talk:Usernamekiran|laporkan kesalahan]]) v2.2.5r",
-    "ms": "Penjejakan AMP telah dialih keluar dari URL ([[:en:User:KiranBOT/AMP|butiran]]) ([[User talk:Usernamekiran|laporkan ralat]]) v2.2.5r",
-    "sv": "AMP-spårning borttagen från URL:er ([[:en:User:KiranBOT/AMP|detaljer]]) ([[User talk:Usernamekiran|rapportera fel]]) v2.2.5r",
-    "tl": "inalis ang pagsubaybay sa AMP sa mga URL ([[:en:User:KiranBOT/AMP|mga detalye]]) ([[User talk:Usernamekiran|mag-ulat ng error]]) v2.2.5r",
+    "ceb": "gitangtang ang pagsubay sa AMP gikan sa mga URL ([[:m:User:KiranBOT/AMP|mga detalye]]) ([[User talk:Usernamekiran|pagtaho ug sayop]]) v2.2.7s",
+    "cs": "odstraněno sledování AMP z URL adres ([[:m:User:KiranBOT/AMP|podrobnosti]]) ([[User talk:Usernamekiran|nahlásit chybu]]) v2.2.7s",
+    "cy": "wedi tynnu olrhain AMP o URLau ([[:m:User:KiranBOT/AMP|manylion]]) ([[User talk:Usernamekiran|adrodd am wall]]) v2.2.7s",
+    "da": "fjernede AMP-sporing fra URL'er ([[:m:User:KiranBOT/AMP|detaljer]]) ([[User talk:Usernamekiran|rapporter en fejl]]) v2.2.7s",
+    "el": "κατάργησε την παρακολούθηση AMP από τις διευθύνσεις URL ([[:m:User:KiranBOT/AMP|καθέκαστα]]) ([[User talk:Usernamekiran|αναφορά σφάλματος]]) v2.2.7s",
+    "eo": "forigis AMP-spuradon de URL-oj  ([[:m:User:KiranBOT/AMP|detaloj]]) ([[User talk:Usernamekiran|raporti eraron]]) v2.2.7s",
+    "et": "eemaldas URL-idelt AMP jälgimise  ([[:m:User:KiranBOT/AMP|detailid]]) ([[User talk:Usernamekiran|teata veast]]) v2.2.7s",
+    "eu": "AMP jarraipena URLetatik kendu da ([[:m:User:KiranBOT/AMP|xehetasunak]]) ([[User talk:Usernamekiran|errorea jakinarazi]]) v2.2.7s",
+    "fa": "حذف ردیابی AMP از URLها ([[:m:User:KiranBOT/AMP|جزئیات]]) ([[User talk:Usernamekiran|گزارش خطا]]) v2.2.7s",
+    "fi": "AMP-seuranta poistettu URL-osoitteista ([[:m:User:KiranBOT/AMP|yksityiskohdat]]) ([[User talk:Usernamekiran|ilmoita virheestä]]) v2.2.7s",
+    "he": "הסרת מעקב AMP מכתובות URL ([[:m:User:KiranBOT/AMP|פרטים]]) ([[User talk:Usernamekiran|דווח על שגיאה]]) v2.2.7s",
+    "hi": "AMP-Tracking को URLs से हटाया ([[:m:User:KiranBOT/AMP|विवरण]]) ([[User talk:Usernamekiran|त्रुटि दर्ज करें]]) v2.2.7s",
+    "hr": "uklonjeno je AMP praćenje iz URL-ova ([[:m:User:KiranBOT/AMP|detalji]]) ([[User talk:Usernamekiran|prijavi grešku]]) v2.2.7s",
+    "hu": "AMP-követés eltávolítva az URL-ekből ([[:m:User:KiranBOT/AMP|részletek]]) ([[User talk:Usernamekiran|hibabejelentés]]) v2.2.7s",
+    "hy": "հեռացվել է AMP հետևումը URL-ներից ([[:m:User:KiranBOT/AMP|մանրամասներf]]) ([[User talk:Usernamekiran|հաղորդել սխալի մասին]]) v2.2.7s",
+    "id": "Pelacakan AMP dihapus dari URL ([[:m:User:KiranBOT/AMP|rincian]]) ([[User talk:Usernamekiran|laporkan kesalahan]]) v2.2.7s",
+    "ka": "URL-ებიდან AMP თვალთვალი წაიშალა ([[:m:User:KiranBOT/AMP|დეტალები]]) ([[User talk:Usernamekiran|შეცდომის შესახებ შეტყობინება]]) v2.2.7s",
+    "ko": "URL에서 AMP 추적을 제거했습니다 ([[:m:User:KiranBOT/AMP|세부]]) ([[User talk:Usernamekiran|오류 보고]]) v2.2.7s",
+    "ku": "şopandina AMP ji URLan hate rakirin ([[:m:User:KiranBOT/AMP|hûrgulî]]) ([[User talk:Usernamekiran|çewtiyek rapor bike]]) v2.2.7s",
+    "la": "vestigationem AMP ex URL remotam ([[:m:User:KiranBOT/AMP|singularia]]) ([[User talk:Usernamekiran|errorem nuntia]]) v2.2.7s",
+    "lld": default_summary,
+    "lt": "pašalintas AMP stebėjimas iš URL ([[:m:User:KiranBOT/AMP|detalės]]) ([[User talk:Usernamekiran|pranešti apie klaidą]]) v2.2.7s",
+    "lv": "noņemta AMP izsekošana no URL ([[:m:User:KiranBOT/AMP|sīkāka informācija]]) ([[User talk:Usernamekiran|ziņot par kļūdu]]) v2.2.7s",
+    "mg": "nesorina ny fanaraha-maso AMP tamin'ny URL ([[:m:User:KiranBOT/AMP|tsipiriany]]) ([[User talk:Usernamekiran|mitatitra lesoka]]) v2.2.7s",
+    "min": "dihapuih palacakan AMP dari URL ([[:m:User:KiranBOT/AMP|detail]]) ([[User talk:Usernamekiran|malaporkan kasalahan]]) v2.2.7s",
+    "ml": "URL-കളിൽ നിന്ന് AMP ട്രാക്കിംഗ് നീക്കം ചെയ്തു  ([[:m:User:KiranBOT/AMP|വിശദാംശങ്ങൾ]]) ([[User talk:Usernamekiran|പിശക് റിപ്പോർട്ട് ചെയ്യുക]]) v2.2.7s",
+    "ms": "Penjejakan AMP telah dialih keluar dari URL ([[:m:User:KiranBOT/AMP|butiran]]) ([[User talk:Usernamekiran|laporkan ralat]]) v2.2.7s",
+    "my": "AMP ခြေရာခံခြင်းကို URL မှ ဖယ်ရှားခဲ့သည်။ ([[:m:User:KiranBOT/AMP|အသေးစိတ်]]) ([[User talk:Usernamekiran|အမှားအယွင်းတစ်ခုကို သတင်းပို့ပါ။]]) v2.2.7s",
+    "nl": "AMP-tracking uit URL's verwijderd ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|fout melden]]) v2.2.7s",
+    "nn": "fjernet AMP-sporing fra URL-er ([[:m:User:KiranBOT/AMP|detaljer]]) ([[User talk:Usernamekiran|rapporter en feil]]) v2.2.7s",
+    "no": "fjernet AMP-sporing fra URL-er ([[:m:User:KiranBOT/AMP|detaljer]]) ([[User talk:Usernamekiran|rapporter en feil]]) v2.2.7s",
+    "oc": "suprimit lo seguiment AMP de las URL ([[:m:User:KiranBOT/AMP|detalhs]]) ([[User talk:Usernamekiran|senhalar una error]]) v2.2.7s",
+    "simple": default_summary,
+    "sh": default_summary,
+    "si": "URL වලින් AMP ලුහුබැඳීම ඉවත් කරන ලදී ([[:m:User:KiranBOT/AMP|විස්තර]]) ([[User talk:Usernamekiran|දෝෂයක් වාර්තා කරන්න]]) v2.2.7s",
+    "sk": "odstránené sledovanie AMP z URL adries ([[:m:User:KiranBOT/AMP|detaily]]) ([[User talk:Usernamekiran|nahlásiť chybu]]) v2.2.7s",
+    "sl": "odstranjeno sledenje AMP iz URL-jev ([[:m:User:KiranBOT/AMP|podrobnosti]]) ([[User talk:Usernamekiran|prijavi napako]]) v2.2.7s",
+    "sq": "gjurmimi i AMP u hoq nga URL-të ([[:m:User:KiranBOT/AMP|detajet]]) ([[User talk:Usernamekiran|raporto një gabim]]) v2.2.7s",
+    "sv": "AMP-spårning borttagen från URL:er ([[:m:User:KiranBOT/AMP|detaljer]]) ([[User talk:Usernamekiran|rapportera fel]]) v2.2.7s",
+    "sw": "iliondoa ufuatiliaji wa AMP kutoka kwa URL ([[:m:User:KiranBOT/AMP|maelezo]]) ([[User talk:Usernamekiran|ripoti hitilafu]]) v2.2.7s",
+    "ta": "URL களில் இருந்து AMP கண்காணிப்பை அகற்றியது ([[:m:User:KiranBOT/AMP|விவரங்கள்]]) ([[User talk:Usernamekiran|பிழையைப் புகாரளிக்கவும்]]) v2.2.7s",
+    "te": "URL నుండి AMP ట్రాకింగ్ తీసివేయబడింది ([[:m:User:KiranBOT/AMP|వివరాలు]]) ([[User talk:Usernamekiran|లోపాన్ని నివేదించండి]]) v2.2.7s",
+    "tg": "пайгирии AMP аз URL хориҷ карда шуд ([[:m:User:KiranBOT/AMP|тафсилот]]) ([[User talk:Usernamekiran|дар бораи хато хабар диҳед]]) v2.2.7s",
+    "th": "ลบการติดตาม AMP ออกจาก URL ([[:m:User:KiranBOT/AMP|รายละเอียด]]) ([[User talk:Usernamekiran|รายงานข้อผิดพลาด]]) v2.2.7s",
+    "tl": "inalis ang pagsubaybay sa AMP sa mga URL ([[:m:User:KiranBOT/AMP|mga detalye]]) ([[User talk:Usernamekiran|mag-ulat ng error]]) v2.2.7s",
+    "tr": "URL'lerden AMP izlemesi kaldırıldı ([[:m:User:KiranBOT/AMP|detaylar]]) ([[User talk:Usernamekiran|hata bildir]]) v2.2.7s",
     "tt": default_summary,
+    "uk": "видалено відстеження AMP з URL-адрес ([[:m:User:KiranBOT/AMP|деталі]]) ([[User talk:Usernamekiran|повідомити про помилку]]) v2.2.7s",
+    "uz": "URL manzillardan AMP kuzatuvi olib tashlandi ([[:m:User:KiranBOT/AMP|tafsilotlar]]) ([[User talk:Usernamekiran|xato haqida xabar bering]]) v2.2.7s",
     "war": default_summary,
     "zh-min-nan": default_summary,
-    "nl": "AMP-tracking uit URL's verwijderd ([[:en:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|fout melden]]) v2.2.5r",
-    "ceb": "Gitangtang ang AMP tracking gikan sa mga URL ([[:en:User:KiranBOT/AMP|detalye]]) ([[User talk:Usernamekiran|reporta ang sayop]]) v2.2.5r",
-    "hi": "AMP-Tracking को URLs से हटाया गया ([[:en:User:KiranBOT/AMP|विवरण]]) ([[User talk:Usernamekiran|त्रुटि दर्ज करें]]) v2.2.5r",
 }
