@@ -8,7 +8,7 @@ KiranBOT also has a task of **updating AMP URLs to their canonical versinos**. T
 
 [KiranBOT's userpage](https://en.wikipedia.org/wiki/User:KiranBOT) at Eglish Wikipedia<br />
 [KiranBOT's userpage](https://meta.wikipedia.org/wiki/User:KiranBOT) at Meta Wikipedia<br />
-[AMP task details](https://en.wikipedia.org/wiki/User:KiranBOT/AMP)<br />
+[AMP task details](https://en.wikipedia.org/wiki/User:KiranBOT/AMP), and change-log<br />
 
 ## About the repository
 This repository contains the main programs/scripts for the [Pywikibot](https://www.mediawiki.org/wiki/Manual:Pywikibot) and [AutoWiki Browser](https://en.wikipedia.org/wiki/Wikipedia:AutoWikiBrowser) (AWB). It does not include the framework or other background files.
