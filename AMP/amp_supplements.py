@@ -201,7 +201,7 @@ edit_summaries = {
     "et": "eemaldas URL-idelt AMP jälgimise  ([[:m:User:KiranBOT/AMP|detailid]]) ([[User talk:Usernamekiran|teata veast]]) v2.2.7r",
     "eu": "AMP jarraipena URLetatik kendu da ([[:m:User:KiranBOT/AMP|xehetasunak]]) ([[User talk:Usernamekiran|errorea jakinarazi]]) v2.2.7r",
     "fa": "حذف ردیابی AMP از URLها ([[:m:User:KiranBOT/AMP|جزئیات]]) ([[User talk:Usernamekiran|گزارش خطا]]) v2.2.7r",
-    "fi": "AMP-seuranta poistettu URL-osoitteista ([[:m:User:KiranBOT/AMP|yksityiskohdat]]) ([[User talk:Usernamekiran|ilmoita virheestä]]) v2.2.7r",
+    "fi": "AMP-seuranta poistettu URL-osoitteista ([[:m:User:KiranBOT/AMP|lisätietoja]]) ([[User talk:Usernamekiran|ilmoita virheestä]]) v2.2.7r",
     "he": "הסרת מעקב AMP מכתובות URL ([[:m:User:KiranBOT/AMP|פרטים]]) ([[User talk:Usernamekiran|דווח על שגיאה]]) v2.2.7r",
     "hi": "AMP-Tracking को URLs से हटाया ([[:m:User:KiranBOT/AMP|विवरण]]) ([[User talk:Usernamekiran|त्रुटि दर्ज करें]]) v2.2.7r",
     "hr": "uklonjeno je AMP praćenje iz URL-ova ([[:m:User:KiranBOT/AMP|detalji]]) ([[User talk:Usernamekiran|prijavi grešku]]) v2.2.7r",
