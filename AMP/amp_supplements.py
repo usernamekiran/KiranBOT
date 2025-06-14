@@ -85,7 +85,8 @@ skip_url_patterns = [
         "kgs-meerkamp.de", "gs-amrosenkamp.de", "ggs-blumenkamp.de",
         "grundschule-heidkamp.de", "kgs-eikamp.de", "ggs-alten-kamp.bobi.net",
         "grundschule-kuhlerkamp.de", "gymnasium-rheinkamp.de", "beisenkamp.eu", "schule-am-buschkamp.de", "annehartkamp.de",
-        "obituaries",
+        "elettronicafacile.it", "indiewebcamp.com", "rutgermolenkamp.nl", "popsci.com", "isrsummercamp.org", # popsci usually redirects to 404 pages
+
     ]
 ]
 
@@ -104,7 +105,7 @@ skippable_words = {
     "amplio", "ampel", "ampersand",
     "ampproject", "amp-project", "webarchive",
     "amphan", "amphibian", "heitkamp",
-    "basecamp", "amphitheater",
+    "basecamp", "amphitheater", "obituaries",
 }
 
 archive_url_patterns = [
@@ -229,7 +230,7 @@ edit_summaries = {
     "oc": "suprimit lo seguiment AMP de las URL ([[:m:User:KiranBOT/AMP|detalhs]]) ([[User talk:Usernamekiran|senhalar una error]]) v2.2.7r",
     "pa": "URL ਤੋਂ AMP ਟਰੈਕਿੰਗ ਹਟਾਈ ਗਈ ([[:m:User:KiranBOT/AMP|ਵੇਰਵੇ]]) ([[User talk:Usernamekiran|ਗਲਤੀ ਦੀ ਰਿਪੋਰਟ ਕਰੋ]]) v2.2.7r",
     "pms": "gjavât vie il monitoraç AMP dai URL ([[:m:User:KiranBOT/AMP|detais]]) ([[User talk:Usernamekiran|segnalâ un erôr]]) v2.2.7r",
-    "ru": "удалено отслеживание AMP из URL-адресов ([[:m:User:KiranBOT/AMP|подробности]]) ([[User talk:Usernamekiran|сообщить об ошибке]]) v2.2.7r lm_rs",
+    "ru": "удалено отслеживание AMP из URL-адресов ([[:m:User:KiranBOT/AMP|подробности]]) ([[User talk:Usernamekiran|сообщить об ошибке]]) v2.2.7r",
     "sh": default_summary,
     "si": "URL වලින් AMP ලුහුබැඳීම ඉවත් කරන ලදී ([[:m:User:KiranBOT/AMP|විස්තර]]) ([[User talk:Usernamekiran|දෝෂයක් වාර්තා කරන්න]]) v2.2.7r",
     "simple": default_summary,
