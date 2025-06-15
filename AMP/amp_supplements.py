@@ -132,24 +132,24 @@ def get_small_wikis():
 
 def get_wiki_sites():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
-    "en", "de", "es", "fr", "it", "pl", "pt",
     "en", "de", "es", "fr", "it", "pl", "pt", "id", "nn", "sl",
-    "ab", "ace", "ady", "af", "als", "am", "ami", "ang", "ann", "anp", "an", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay",
-    "ba", "ban", "bar", "bbc", "bcl", "bdr", "be", "bew", "be-tarask", "bg", "bh", "bi", "bjn", "blk", "bm", "bo", "bpy", "br", "btm", "bug", "bxr",
-    "ca", "cdo", "ce", "ceb", "ch", "chr", "chy", "ckb", "co", "cr", "crh", "cs", "csb", "cu", "cv", "cy", "da", "dag", "dga", "din", "diq", "dsb", "dtp", "dty", "dz",
+    "ab", "ace", "ady", "af", "als", "am", "ami", "ang", "anp", "an", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay",
+    "ba", "ban", "bar", "bbc", "bcl", "be", "be-tarask", "bg", "bh", "bi", "bjn", "blk", "bm", "bo", "bpy", "br", "bug", "bxr",
+    "ca", "cdo", "ce", "ceb", "ch", "chr", "chy", "ckb", "co", "cr", "crh", "cs", "csb", "cu", "cv", "cy", "da", "dag", "dga", "din", "diq", "dsb", "dty", "dz",
     "ee", "el", "eml", "en", "eo", "et", "eu", "ext", "fa", "fat", "ff", "fi", "fj", "fo", "fon", "frp", "frr", "fur",
     "ga", "gag", "gan", "gcr", "gd", "glk", "gn", "gom", "gor", "got", "gpe", "gu", "guc", "gur", "guw", "gv", "ha", "hak", "haw", "he", "hi", "hif", "hr", "hsb", "ht", "hu", "hy", "hyw",
-    "ia", "iba", "ie", "ig", "igl", "ik", "ilo", "inh", "io", "iu", "ja", "jam", "jbo", "jv",
-    "ka", "kaa", "kab", "kbd", "kbp", "kcg", "kg", "kge", "ki", "kk", "kl", "km", "kn", "knc", "ko", "koi", "krc", "ks", "ku", "kus", "kv", "kw", "ky",
+    "ia", "ie", "ig", "ik", "ilo", "inh", "io", "iu", "ja", "jam", "jbo", "jv",
+    "ka", "kaa", "kab", "kbd", "kbp", "kcg", "kg", "ki", "kk", "kl", "km", "kn", "ko", "koi", "krc", "ks", "ku", "kv", "kw", "ky",
     "la", "lad", "lb", "lbe", "lez", "lfn", "lg", "li", "lij", "lld", "lmo", "ln", "lo", "lt", "ltg", "lv",
-    "mad", "mai", "mdf", "mg", "mhr", "mi", "min", "mk", "ml", "mn", "mni", "mos", "mrj", "ms", "mwl", "my", "myv", "mzn",
-    "nah", "nap", "ne", "new", "nia", "nl", "no", "nov", "nqo", "nrm", "nr", "nso", "nup", "nv", "ny", "oc", "olo", "om", "or", "os",
-    "pa", "pag", "pam", "pap", "pcd", "pcm", "pdc", "pfl", "pi", "pms", "pnb", "pnt", "ps", "pwn", "qu", "rm", "rmy", "rn", "rsk", "rue", "ru", "rw",
-    "sa", "sah", "sat", "scn", "sc", "sco", "sd", "se", "sg", "sh" "shi", "shn", "si", "simple", "sk", "skr", "sm", "smn", "sn", "so", "sq", "srn", "ss", "st", "stq", "su", "sv", "sw", "syl", "szl", "szy",
-    "ta", "tay", "tcy", "tdd", "tet", "te", "tg", "th", "tig", "ti", "tk", "tl", "tly", "tn", "to", "tpi", "trv", "ts", "tt", "tum", "tw", "tyv", "ty",
+    "mad", "mai", "mdf", "mg", "mhr", "mi", "min", "mk", "ml", "mn", "mni", "mrj", "ms", "mwl", "my", "myv", "mzn",
+    "nah", "nap", "ne", "new", "nia", "nl", "no", "nov", "nqo", "nrm", "nso", "nv", "ny", "oc", "olo", "om", "or", "os",
+    "pa", "pag", "pam", "pap", "pcd", "pcm", "pdc", "pfl", "pi", "pms", "pnb", "pnt", "ps", "pwn", "qu", "rm", "rmy", "rn", "rue", "ru", "rw",
+    "sa", "sah", "sat", "scn", "sc", "sco", "sd", "se", "sg", "sh", "shi", "shn", "si", "simple", "sk", "skr", "sm", "smn", "sn", "so", "sq", "srn", "ss", "st", "stq", "su", "sv", "sw", "szl", "szy",
+    "ta", "tay", "tcy", "tet", "te", "tg", "th", "ti", "tk", "tl", "tly", "tn", "to", "tpi", "trv", "ts", "tt", "tum", "tw", "tyv", "ty",
     "udm", "ug", "uz", "vec", "vep", "ve", "vls", "vo", "wa", "war", "wo", "xal", "xh", "xmf", "yi", "yo", "za", "zea", "zgh", "zh", "zu",
 ]}
 
+# exists, but not available in pywikibot: "ann", "bdr", "bew", "btm", "dtp", "iba", "igl", "kge", "knc", "kus", "mos", "nr", "nup", "rsk", "syl", "tdd", "tig",
 # temporarily paused: "bs"
 # temporarily halted: tr, az, azb
 
