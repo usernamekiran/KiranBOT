@@ -11,7 +11,7 @@ skip_url_patterns = [
         "legacy.com",
         "amp.dev", "amp.org.br", "amp.pt",
         "larepublica-pe.cdn.ampproject.org",
-        "archive.is", "archive.ph", "archive.today",
+        "archive.is", "archive.ph", "archive.today", "campaign-archive.com",
         "amp.gov.al", "agemcamp.sp.gov.br", "angelscamp.gov", "whccamp.hhs.gov",
         "acacamps.org", "asburyamp.org", "ampcapital.com" "astronomycamp.org", "astrocamp.org",
         "australianstamp.com", "bandcamp.com", "bamp.fr", "hamiltoncamp.com", "unicamp.academia.edu",
@@ -83,7 +83,14 @@ skip_url_patterns = [
         "spacecamp.com", "pctechbootcamp.com", "fukudajudocamp.org", "ville-fecamp.fr", "locmariagrandchamp.fr",
         "loulansverchamp.fr", "neuvy-grandchamp.com", "saint-genest-lachamp.fr", "vercel-villedieu-le-camp.fr", "kettenkamp.de",
         "cordclamp.com", "highcamp.tripod.com", "texastornadobootcamp.com", "highcamp.web.id", "baungcamp.com",
-        "wellspringcamp.co.uk", "amprofon.com", "amprofon.com.mx", "ampers.org",
+        "wellspringcamp.co.uk", "amprofon.com", "amprofon.com.mx", "ampers.org", "makeachamp.com",
+        "steampowered.com", "ourcampaigns.com", "ourcampaigns.com", "whosampled.com", "soypampeano.com",
+        "archiviolastampa.it", "footchampion.com", "campionicalcio.com", "thesportscampus.com", "swampland.time.com", "tampabay.com",
+        "nottinghampost.com", "bramptonguardian.com", "ncresearchcampus.net", "en.unpacampaign.org", "camp-fire.jp",
+        "championshiprugby.co.uk", "namport.com.na", "hampshirechronicle.co.uk", "panampost.com", "wokinghampaper.co.uk",
+        "bramptonwest.conservativeeda.ca", "easthamptonstar.com", "postalmuseum.si.edu", "canadianstampnews.com", "tampabaytimesforum.com",
+        "hamptonschool.org.uk", "tampabayprotocol.com", "tuttocampo.it", "campaignindia.in", "campiflegrei.it",
+        "opencampania.it",
     ]
 ]
 
