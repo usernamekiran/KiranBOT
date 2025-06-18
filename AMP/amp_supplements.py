@@ -83,7 +83,7 @@ skip_url_patterns = [
         "spacecamp.com", "pctechbootcamp.com", "fukudajudocamp.org", "ville-fecamp.fr", "locmariagrandchamp.fr",
         "loulansverchamp.fr", "neuvy-grandchamp.com", "saint-genest-lachamp.fr", "vercel-villedieu-le-camp.fr", "kettenkamp.de",
         "cordclamp.com", "highcamp.tripod.com", "texastornadobootcamp.com", "highcamp.web.id", "baungcamp.com",
-        "wellspringcamp.co.uk", "amprofon.com", "amprofon.com.mx",
+        "wellspringcamp.co.uk", "amprofon.com", "amprofon.com.mx", "ampers.org",
     ]
 ]
 
@@ -122,7 +122,7 @@ def get_wiki_sites():
     "ab", "ace", "ady", "af", "als", "am", "ami", "ang", "an", "anp", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay",
     "ba", "ban", "bar", "bbc", "bcl", "be", "be-tarask", "bg", "bh", "bi", "bjn", "blk", "bm", "bn", "bo", "bpy", "br", "bug", "bxr",
     "ca", "cdo", "ce", "ceb", "ch", "chr", "chy", "ckb", "co", "cr", "crh", "cs", "csb", "cu", "cv", "cy", "da", "dag", "dga", "din", "diq", "dsb", "dty", "dz",
-    "ee", "el", "eml", "en", "eo", "et", "eu", "ext", "fa", "fat", "ff", "fi", "fj", "fo", "fon", "frp", "frr", "fur",
+    "ee", "el", "eml", "eo", "et", "eu", "ext", "fa", "fat", "ff", "fi", "fj", "fo", "fon", "frp", "frr", "fur",
     "ga", "gag", "gan", "gcr", "gd", "glk", "gn", "gom", "gor", "got", "gpe", "gu", "guc", "gur", "guw", "gv", "ha", "hak", "haw", "he", "hi", "hif", "hr", "hsb", "ht", "hu", "hy", "hyw",
     "ia", "ie", "ig", "ik", "ilo", "inh", "io", "iu", "ja", "jam", "jbo", "jv",
     "ka", "kaa", "kab", "kbd", "kbp", "kcg", "kg", "ki", "kk", "kl", "km", "kn", "ko", "koi", "krc", "ks", "ku", "kv", "kw", "ky",
