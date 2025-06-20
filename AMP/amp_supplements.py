@@ -11,7 +11,7 @@ skip_url_patterns = [
         "legacy.com",
         "amp.dev", "amp.org.br", "amp.pt",
         "larepublica-pe.cdn.ampproject.org",
-        "archive.is", "archive.ph", "archive.today", "campaign-archive.com",
+        "archive.is", "archive.ph", "archive.today", "archive.org", "campaign-archive.com",
         "amp.gov.al", "agemcamp.sp.gov.br", "angelscamp.gov", "whccamp.hhs.gov",
         "acacamps.org", "asburyamp.org", "ampcapital.com" "astronomycamp.org", "astrocamp.org",
         "australianstamp.com", "bandcamp.com", "bamp.fr", "hamiltoncamp.com", "unicamp.academia.edu",
