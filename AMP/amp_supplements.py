@@ -2,6 +2,23 @@ import pywikibot
 from pywikibot import Site
 import re
 
+# define AMP keywords and path patterns
+AMP_KEYWORDS = [
+    "/amp", "amp/", ".amp", "amp.", "?amp", "amp?", "=amp", "amp=",
+    "&amp", "amp&", "%amp", "amp%", "_amp", "amp_", "-amp", "amp-",
+    "/amp-", "-amp/", "amphtml", "_amphtml", "-amphtml", "/amphtml",
+    "amphtml/", "?amphtml", "amphtml=", "amphtml?", "amp_version",
+    "outputType=amp", "renderMode=amp", "amp_js_v",
+]
+
+PATH_PATTERNS = [
+    r'/amp/', r'-amp/', r'/amp-', r'-amp', r'/amphtml/', r'-amphtml',
+    r'amp_articleshow', r'-amp(\.html|\.php|\.asp|\.htm|_section)?$',
+    r'_amp(\.html|\.php)?$', r'amp_articleshow', r'/ampRFA$',
+    r'/amp-page/?$', r'\.amp\.html$', r'/amp\.[a-z]+$', r'/amp_js_v[0-9]+',
+    r'/ampredir/', r'/amp-view/', r'/amp_embed/',
+]
+
 # list of url patterns to skip
 skip_url_patterns = [
     rf"^https?://(?:[\w.-]+\.)?{re.escape(domain)}(/.*)?$"
