@@ -159,9 +159,16 @@ def get_wiki_sites():
     "udm", "ug", "uz", "vec", "vep", "ve", "vls", "vo", "wa", "war", "wo", "xal", "xh", "xmf", "yi", "yo", "za", "zea", "zgh", "zh", "zu",
 ]}
 
+def get_wikinews_sites():
+    return {f"{code}wiki": Site(code, "wikinews") for code in [
+    "ar", "bg", "bs", "ca", "cs", "el", "en", "eo", "fa", "fi", "guw", "he", "hu", "ja", "ko", "li",
+    "nl", "no", "pl", "pt", "ro", "sd", "sq", "sr", "sv", "ta", "th", "tr", "uk", "zh",
+]}
+
 # temporarily removed "ckb", discussion about indention is going on with Sakura
 
 # exists, but not available in pywikibot: "ann", "bdr", "bew", "btm", "dtp", "iba", "igl", "kge", "knc", "kus", "mos", "nr", "nup", "rsk", "syl", "tdd", "tig",
+# wikinews: shn,
 
 # dictionary of edit summaries for each wikipedia language
 default_summary = "removed AMP tracking from URLs ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|report error]]) v2.2.7r"
