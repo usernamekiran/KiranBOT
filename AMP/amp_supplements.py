@@ -107,7 +107,7 @@ skip_url_patterns = [
         "championshiprugby.co.uk", "namport.com.na", "hampshirechronicle.co.uk", "panampost.com", "wokinghampaper.co.uk",
         "bramptonwest.conservativeeda.ca", "easthamptonstar.com", "postalmuseum.si.edu", "canadianstampnews.com", "tampabaytimesforum.com",
         "hamptonschool.org.uk", "tampabayprotocol.com", "tuttocampo.it", "campaignindia.in", "campiflegrei.it",
-        "opencampania.it",
+        "opencampania.it", "bundescamp.de", "codecamp.jp",
     ]
 ]
 
