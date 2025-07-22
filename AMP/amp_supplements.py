@@ -104,7 +104,7 @@ skip_url_patterns = [
         "servamp.jp", "ffamp.com", "bundescamp.de", "heavenstamp.net", "stopstamp.ru",
         "bohnenkamp.de", "maiamp.gov.my", "joachimstamp.de", "nicolestamp.com", "ampalestine.org",
         "kenmorestamp.com", "samp.pt", "mathcamp.org", "acacamp.org", "jewishcamp.org",
-        "henristeenkamp.org", "jeffkottkamp.com", "panstamp.com",
+        "henristeenkamp.org", "jeffkottkamp.com", "panstamp.com", "my-camp.org",
     ]
 ]
 
