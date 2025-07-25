@@ -81,6 +81,7 @@ skip_url_patterns = [
         "grundschule-heidkamp.de", "kgs-eikamp.de", "ggs-alten-kamp.bobi.net", "isrsummercamp.org", "nativecamp.net",
         "grundschule-kuhlerkamp.de", "gymnasium-rheinkamp.de", "beisenkamp.eu", "schule-am-buschkamp.de", "annehartkamp.de",
         "elettronicafacile.it", "indiewebcamp.com", "rutgermolenkamp.nl", "popsci.com", "popsci.com.au", # popsci usually redirects to 404 pages
+        "nieuwsblad.be", # requested on talkpage, fetched urls are from another domain
         "amp-lessons.com", "championat.com", "rockcamp.es", "memorial-chiry-ourscamp.fr", "editoraunicamp.com.br",
         "eurocamp.co.uk", "toocamp.com", "orangecamp.dk", "thedailycampus.com", "adunicamp.org.br",
         "mellencamp.com", "coltscamp.com", "bonsallcamp.co.uk", "tuttocalciocampano.it", "forestcamp.info",
