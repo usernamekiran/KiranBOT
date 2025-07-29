@@ -106,7 +106,10 @@ skip_url_patterns = [
         "bohnenkamp.de", "maiamp.gov.my", "joachimstamp.de", "nicolestamp.com", "ampalestine.org",
         "kenmorestamp.com", "samp.pt", "mathcamp.org", "acacamp.org", "jewishcamp.org",
         "henristeenkamp.org", "jeffkottkamp.com", "panstamp.com", "my-camp.org", "letabarestcamp.com",
-        "skatecamp.co.uk",
+        "skatecamp.co.uk", "armenstamp.com", "galiscamp.gr", "altcamp.cat", "soccercamp.com",
+        "reagrupamentbaixcamp.cat", "warburg.chaa-unicamp.com.br", "yarmoukcamp.net", "campos24horas.com.br", "grammarcamp.com",
+        "ticketcamp.net", "baycamp.net", "gamercamp.ca", "urbancamp.net", "comuencamp.ad",
+        "bootcamp.com", "camperchamp.com.au",
     ]
 ]
 
