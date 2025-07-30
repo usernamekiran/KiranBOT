@@ -147,7 +147,7 @@ def get_wiki_sites():
     "en", "de", "es", "fr", "it", "pl", "pt", "id", "mr", "nn", "sl",
     "ab", "ace", "ady", "af", "als", "am", "ami", "ang", "an", "anp", "ar", "arc", "arz", "as", "ast", "atj", "av", "avk", "awa", "ay",
     "ba", "ban", "bar", "bbc", "bcl", "be", "be-tarask", "bg", "bh", "bi", "bjn", "blk", "bm", "bn", "bo", "bpy", "br", "bug", "bxr",
-    "ca", "cdo", "ce", "ceb", "ch", "chr", "chy", "co", "cr", "crh", "cs", "csb", "cu", "cv", "cy", "da", "dag", "dga", "din", "diq", "dsb", "dty", "dz",
+    "ca", "cdo", "ce", "ceb", "ch", "chr", "chy", "ckb", "co", "cr", "crh", "cs", "csb", "cu", "cv", "cy", "da", "dag", "dga", "din", "diq", "dsb", "dty", "dz",
     "ee", "el", "eml", "eo", "et", "eu", "ext", "fa", "fat", "ff", "fi", "fj", "fo", "fon", "frp", "frr", "fur",
     "ga", "gag", "gan", "gcr", "gd", "glk", "gn", "gom", "gor", "got", "gpe", "gu", "guc", "gur", "guw", "gv", "ha", "hak", "haw", "he", "hi", "hif", "hr", "hsb", "ht", "hu", "hy", "hyw",
     "ia", "ie", "ig", "ik", "ilo", "inh", "io", "iu", "ja", "jam", "jbo", "jv",
@@ -166,9 +166,6 @@ def get_wikinews_sites():
     "ar", "bg", "bs", "ca", "cs", "el", "en", "eo", "fa", "fi", "guw", "he", "hu", "ja", "ko", "li",
     "nl", "no", "pl", "pt", "ro", "sd", "sq", "sr", "sv", "ta", "th", "tr", "uk", "zh",
 ]}
-
-# temporarily removed "ckb", discussion about indention is going on with Sakura
-# removed "zh", requires brfa
 
 # exists, but not available in pywikibot: "ann", "bdr", "bew", "btm", "dtp", "iba", "igl", "kge", "knc", "kus", "mos", "nr", "nup", "rsk", "syl", "tdd", "tig",
 # wikinews: shn,
