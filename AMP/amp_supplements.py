@@ -109,7 +109,8 @@ skip_url_patterns = [
         "skatecamp.co.uk", "armenstamp.com", "galiscamp.gr", "altcamp.cat", "soccercamp.com",
         "reagrupamentbaixcamp.cat", "warburg.chaa-unicamp.com.br", "yarmoukcamp.net", "campos24horas.com.br", "grammarcamp.com",
         "ticketcamp.net", "baycamp.net", "gamercamp.ca", "urbancamp.net", "comuencamp.ad",
-        "bootcamp.com", "camperchamp.com.au",
+        "bootcamp.com", "camperchamp.com.au", "adelaidenow.com", "foreign.go.tz", "padua-access.stuttgart.de",
+        "wdwinfo.com",
     ]
 ]
 
