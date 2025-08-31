@@ -114,6 +114,7 @@ skip_url_patterns = [
         "powcamp.fsnet.co.uk", "altcamp.altanet.org", "maesaelephantcamp.com", "fanamp.com", "nifs.no",
         "silberkamp.de", "hikamp.com", "echosonicamp.com", "tannensmagiccamp.com", "bundespolizeibiker-camp.de",
         "goshiki-camp.com", "infocamp.cat", "psicamp.it", "galescreekcamp.org", "understandingduchamp.com",
+        "wordcamp.org",
     ]
 ]
 
