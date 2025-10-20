@@ -30,6 +30,7 @@ skip_url_patterns = [
         "larepublica-pe.cdn.ampproject.org",
         "archive.is", "archive.ph", "archive.today", "archive.org", "campaign-archive.com",
         "amp.gov.al", "agemcamp.sp.gov.br", "angelscamp.gov", "whccamp.hhs.gov", "techcamp.america.gov",
+        "climate.nasa.gov",
         "acacamps.org", "asburyamp.org", "ampcapital.com" "astronomycamp.org", "astrocamp.org",
         "australianstamp.com", "bandcamp.com", "bamp.fr", "hamiltoncamp.com", "unicamp.academia.edu",
         "barrysbootcamp.com", "bengalscamp.com", "biancabeauchamp.com", "bitstamp.net", "boamp.fr",
