@@ -165,7 +165,7 @@ def get_wiki_sites():
     "pa", "pag", "pam", "pap", "pcd", "pcm", "pdc", "pfl", "pi", "pms", "pnb", "pnt", "ps", "pwn", "qu", "rm", "rmy", "rn", "ro", "rue", "ru", "rw",
     "sa", "sah", "sat", "scn", "sc", "sco", "sd", "se", "sg", "sh", "shi", "shn", "si", "simple", "sk", "skr", "sm", "smn", "sn", "so", "sq", "srn", "ss", "st", "stq", "su", "sv", "sw", "szl", "szy",
     "ta", "tay", "tcy", "tet", "te", "tg", "th", "ti", "tk", "tl", "tly", "tn", "to", "tpi", "trv", "ts", "tt", "tum", "tw", "tyv", "ty",
-    "udm", "ug", "uz", "vec", "vep", "ve", "vls", "vo", "wa", "war", "wo", "xal", "xh", "xmf", "yi", "yo", "za", "zea", "zh", "zgh", "zu",
+    "udm", "ug", "uk", "uz", "vec", "vep", "ve", "vls", "vo", "wa", "war", "wo", "xal", "xh", "xmf", "yi", "yo", "za", "zea", "zh", "zgh", "zu",
 ]}
 
 def get_wikinews_sites():
