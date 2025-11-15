@@ -116,7 +116,8 @@ skip_url_patterns = [
         "silberkamp.de", "hikamp.com", "echosonicamp.com", "tannensmagiccamp.com", "bundespolizeibiker-camp.de",
         "goshiki-camp.com", "infocamp.cat", "psicamp.it", "galescreekcamp.org", "understandingduchamp.com",
         "wordcamp.org", "stamp.umd.edu", "heavenstamp.com", "elementsmusiccamp.com.ph", "springlakedaycamp.com",
-        "frihetskamp.net", "frihetskamp.no", "bigstamp.uk",
+        "frihetskamp.net", "frihetskamp.no", "bigstamp.uk", "phootcamp.com", "fortfun-abenteuercamp.de",
+        "ifch.unicamp.br", "icc-camp.info", "secustamp.com",
     ]
 ]
 
