@@ -118,7 +118,7 @@ skip_url_patterns = [
         "wordcamp.org", "stamp.umd.edu", "heavenstamp.com", "elementsmusiccamp.com.ph", "springlakedaycamp.com",
         "frihetskamp.net", "frihetskamp.no", "bigstamp.uk", "phootcamp.com", "fortfun-abenteuercamp.de",
         "ifch.unicamp.br", "icc-camp.info", "secustamp.com", "adacamp.org", "mibumpirecamp.com",
-        "ciwangunindahcamp.com", "requiemchevaliervamp.free.fr",
+        "ciwangunindahcamp.com", "requiemchevaliervamp.free.fr", "amp.org.ph",
     ]
 ]
 
