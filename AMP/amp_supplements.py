@@ -81,7 +81,7 @@ skip_url_patterns = [
         "fineartscamp.org", "ggslangekamp.de", "kgs-meerkamp.de", "gs-amrosenkamp.de", "ggs-blumenkamp.de",
         "grundschule-heidkamp.de", "kgs-eikamp.de", "ggs-alten-kamp.bobi.net", "isrsummercamp.org", "nativecamp.net",
         "grundschule-kuhlerkamp.de", "gymnasium-rheinkamp.de", "beisenkamp.eu", "schule-am-buschkamp.de", "annehartkamp.de",
-        "elettronicafacile.it", "indiewebcamp.com", "rutgermolenkamp.nl",
+        "elettronicafacile.it", "indiewebcamp.com", "rutgermolenkamp.nl", "backtothesugarcamp.com", "bonestamp.com",
         "popsci.com", "popsci.com.au", "dell.com", "itworld.com",  # popsci usually redirects to 404 pages
         "nieuwsblad.be", # requested on talkpage, fetched urls are from another domain
         "amp-lessons.com", "championat.com", "rockcamp.es", "memorial-chiry-ourscamp.fr", "editoraunicamp.com.br",
@@ -123,7 +123,8 @@ skip_url_patterns = [
         "motutapucamp.org.nz", "ot-guingamp.org", "nalbandstamp.com", "erikaskicamp.com", "trolltamp.com",
         "climatecamp.tv", "climatecamp.org.uk", "danielheidkamp.com", "rapchamp.com", "howdycamp.tamu.edu",
         "t-camp.tamu.edu", "garrettcamp.com", "heswallcamp.org.uk", "witchcamp.org", "spacecamp.no",
-        "objcamp.com", "procamps.com",
+        "objcamp.com", "procamps.com", "pbacamp.org", "samusicmag.co.za", "swedensocialwebcamp.com",
+        "bloodybloodybiblecamp.com", "nationalradiochamp.com", "supercamp.com", "miznerparkamp.com",
     ]
 ]
 
