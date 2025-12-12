@@ -24,7 +24,7 @@ skip_url_patterns = [
     rf"^https?://(?:[\w.-]+\.)?{re.escape(domain)}(/.*)?$"
     for domain in [
         "wikipedia.org",
-        "books.google.com", "news.google.com",
+        "books.google.com", "news.google.com", "maps.google.com",
         "legacy.com",
         "amp.dev", "amp.org.br", "amp.pt",
         "larepublica-pe.cdn.ampproject.org",
