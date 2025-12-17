@@ -1,0 +1,381 @@
+2025-12-17
+
+** allowed wikipedias:
+
+* tig          Tigre                 41
+* dz           Dzongkha              377
+* iu           Inuktitut             425
+* ann          Obolo                 433
+* sg           Sango                 447
+* tdd          Tai Nuea              448
+* pnt          Pontic                538
+* nup          Nupe                  538
+* ch           Chamorro              557
+* ady          Adyghe                619
+* ik           Inupiaq               664
+* guc          Wayuu                 689
+* rn           Rundi                 703
+* chy          Cheyenne              720
+* rmy          Vlax Romani           756
+* ve           Venda                 822
+* bm           Bambara               920
+* igl          Igala                 943
+* ts           Tsonga                950
+* got          Gothic                1,001
+* chr          Cherokee              1,002
+* rsk          Pannonian Rusyn       1,016
+* gcr          Guianan Creole        1,075
+* rki          Arakanese             1,082
+* ny           Nyanja                1,099
+* ltg          Latgalian             1,112
+* alt          Southern Altai        1,103
+* srn          Sranan Tongo          1,128
+* ss           Swati                 1,132
+* ami          Amis                  1,145
+* lbe          Lak                   1,194
+* sm           Samoan                1,201
+* syl          Sylheti               1,203
+* ee           Ewe                   1,267
+* mos          Mossi                 1,307
+* cu           Church Slavic         1,313
+* bbc          Batak Toba            1,318
+* gur          Frafra                1,331
+* jbo          Lojban                1,351
+* tet          Tetum                 1,380
+* roa-rup      Aromanian             1,390
+* tpi          Tok Pisin             1,407
+* bi           Bislama               1,479
+* pcm          Nigerian Pidgin       1,531
+* guw          Gun                   1,562
+* knc          Central Kanuri        1,567
+* kg           Kongo                 1,570
+* st           Southern Sotho        1,570
+* nqo          N’Ko                  1,584
+* xal          Kalmyk                1,597
+* fj           Fijian                1,614
+* kbd          Kabardian             1,640
+* anp          Angika                1,669
+* dtp          Central Dusun         1,718
+* jam          Jamaican Creole       1,729
+* wo           Wolof                 1,745
+* fat          Fanti                 1,762
+* nia          Nias                  1,767
+* iba          Iban                  1,871
+* nov          Novial                1,892
+* arc          Aramaic               1,918
+* ki           Kikuyu                1,938
+* om           Oromo                 1,960
+* mnw          Mon                   1,966
+* mad          Madurese              2,025
+* pdc          Pennsylvania German   2,046
+* atj          Atikamekw             2,077
+* xh           Xhosa                 2,319
+* inh          Ingush                2,412
+* awa          Awadhi                2,597
+* pag          Pangasinan            2,620
+* krc          Karachay-Balkar       2,683
+* szy          Sakizaya              2,735
+* pfl          Palatine German       2,833
+* blk          Pa'O                  2,909
+* bxr          Russia Buriat         2,911
+* haw          Hawaiian              2,967
+* za           Zhuang                3,006
+* gag          Gagauz                3,013
+* ksh          Colognian             3,038
+* bew          Betawi                3,111
+* dv           Divehi                3,192
+* cbk-zam      Chavacano             3,235
+* tok          Toki Pona             3,346
+* fon          Fon                   3,343
+* dsb          Lower Sorbian         3,428
+* koi          Komi-Permyak          3,468
+* gom          Goan Konkani          3,643
+* tn           Tswana                3,769
+* rm           Romansh               3,813
+* lad          Ladino                3,896
+* tyv          Tuvinian              4,068
+* ext          Extremaduran          4,087
+* stq          Saterland Frisian     4,130
+* gpe          Ghanaian Pidgin       4,150
+* mwl          Mirandese             4,283
+* lg           Ganda                 4,430
+* lez          Lezghian              4,454
+* lfn          Lingua Franca Nova    4,501
+* tw           Twi                   4,619
+* olo          Livvi-Karelian        4,651
+* ln           Lingala               4,846
+* fur          Friulian              4,886
+* pap          Papiamento            5,046
+* nrm          Norman                5,056
+* lo           Lao                   5,247
+* ay           Aymara                5,245
+* csb          Kashubian             5,498
+* udm          Udmurt                5,713
+* kv           Komi                  5,731
+* frp          Arpitan               5,817
+* gn           Guarani               5,984
+* pcd          Picard                6,045
+* ab           Abkhazian             6,480
+* smn          Inari Sami            6,508
+* gan          Gan                   6,815
+* fiu-vro      Võro                  6,880
+* kab          Kabyle                7,010
+* gv           Manx                  7,051
+* tk           Turkmen               7,055
+* vep          Veps                  7,078
+* kw           Cornish               7,096
+* bo           Tibetan               7,570
+* mdf          Moksha                7,616
+* mt           Maltese               7,672
+* sc           Sardinian             7,737
+* myv          Erzya                 7,867
+* se           Northern Sami         7,905
+* mi           Māori                 8,018
+* nds-nl       Low Saxon             8,067
+* vls          West Flemish          8,238
+* ks           Kashmiri              8,446
+* co           Corsican              8,625
+* nso          Northern Sotho        8,783
+* bh           Bhojpuri              8,859
+* rw           Kinyarwanda           8,917
+* roa-tara     Tarantino             9,497
+* ug           Uyghur                9,616
+* so           Somali                10,006
+* tly          Talysh                10,060
+* pam          Pampanga              10,149
+* rue          Rusyn                 10,159
+* hak          Hakka Chinese         10,386
+* mrj          Western Mari          10,429
+* mni          Manipuri              10,456
+* shi          Tachelhit             10,882
+* ary          Moroccan Arabic       10,942
+* kaa          Kara-Kalpak           10,922
+* mhr          Eastern Mari          11,325
+* bjn          Banjar                11,489
+* sn           Shona                 11,498
+* zu           Zulu                  11,832
+* km           Khmer                 11,861
+* zgh          Standard Moroccan Tamazight 12,021
+* hif          Fiji Hindi            12,096
+* sa           Sanskrit              12,418
+* wa           Walloon               12,826
+* ace          Acehnese              13,004
+* ff           Fula                  13,309
+* hyw          Western Armenian      13,313
+* dag          Dagbani               13,354
+* ie           Interlingue           13,404
+* eml          Emiliano-Romagnolo    13,759
+* map-bms      Banyumasan            13,940
+* sat          Santali               14,153
+* fo           Faroese               14,180
+* hsb          Upper Sorbian         14,217
+* mai          Maithili              14,252
+* shn          Shan                  14,389
+* gor          Gorontalo             14,912
+* nap          Neapolitan            14,937
+* li           Limburgish            15,146
+* ilo          Iloko                 15,441
+* am           Amharic               15,460
+* yi           Yiddish               15,641
+* bug          Buginese              15,957
+* gd           Scottish Gaelic       16,018
+* cdo          Mindong               16,702
+* bat-smg      Samogitian            17,274
+* sah          Yakut                 17,841
+* tum          Tumbuka               18,795
+* sd           Sindhi                19,722
+* or           Odia                  20,145
+* frr          Northern Frisian      20,688
+* ps           Pashto                20,836
+* as           Assamese              20,901
+* bcl          Central Bikol         21,261
+* os           Ossetic               21,436
+* nv           Navajo                22,664
+* skr          Saraiki               24,336
+* qu           Quechua               24,365
+* si           Sinhala               24,937
+* bpy          Bishnupriya           25,092
+* scn          Sicilian              26,271
+* mn           Mongolian             26,631
+* bar          Bavarian              27,204
+* crh          Crimean Tatar         29,624
+* avk          Kotava                29,900
+* ia           Interlingua           30,162
+* gu           Gujarati              30,752
+* als          Alemannic             31,417
+* kn           Kannada               34,153
+* sco          Scots                 34,281
+* ban          Balinese              34,972
+* yo           Yoruba                36,387
+* ig           Igbo                  44,175
+* vo           Volapük               46,709
+* wuu          Wu                    47,074
+* glk          Gilaki                48,352
+* tl           Tagalog               48,801
+* an           Aragonese             50,859
+* cv           Chuvash               58,210
+* fy           Western Frisian       58,825
+* pa           Punjabi               59,296
+* szl          Silesian              59,647
+* io           Ido                   60,329
+* is           Icelandic             60,907
+* su           Sundanese             62,166
+* ga           Irish                 62,722
+* ba           Bashkir               63,917
+* mzn          Mazanderani           64,487
+* lb           Luxembourgish         66,280
+* vec          Venetian              69,530
+* pms          Piedmontese           70,748
+* ht           Haitian Creole        71,477
+* new          Newari                72,925
+* ha           Hausa                 73,852
+* jv           Javanese              74,801
+* pnb          Western Punjabi       74,811
+* ky           Kyrgyz                76,126
+* ckb          Central Kurdish       79,335
+* lmo          Lombard               79,922
+* nds          Low German            85,776
+* ml           Malayalam             87,443
+* br           Breton                90,107
+* be-tarask    Belarusian (Taraškievica) 90,161
+* oc           Occitan               90,432
+* ku           Kurdish               90,938
+* bs           Bosnian               96,315
+* mr           Marathi              100,877
+* mg           Malagasy             101,616
+* sw           Swahili              103,156
+* sq           Albanian             104,883
+* my           Burmese              109,845
+* tg           Tajik                116,162
+* te           Telugu               117,529
+* af           Afrikaans            127,517
+* ast          Asturian             138,370
+* lv           Latvian              139,375
+* la           Latin                140,821
+* zh-yue       Cantonese            148,416
+* mk           Macedonian           157,332
+* hi           Hindi                166,921
+* nn           Norwegian Nynorsk    177,017
+* th           Thai                 178,190
+* bn           Bangla               178,738
+* ta           Tamil                179,193
+* lld          Ladin                180,829
+* ka           Georgian             188,778
+* sl           Slovenian            195,930
+* az           Azerbaijani          209,964
+* lt           Lithuanian           224,443
+* gl           Galician             228,344
+* hr           Croatian             228,711
+* ur           Urdu                 236,405
+* kk           Kazakh               241,506
+* azb          South Azerbaijani    244,456
+* et           Estonian             256,485
+* sk           Slovak               257,155
+* be           Belarusian           257,962
+* el           Greek                262,320
+* simple       Simple English       277,538
+* cy           Welsh                283,864
+* bg           Bulgarian            306,859
+* da           Danish               311,832
+* uz           Uzbek                320,613
+* hy           Armenian             323,210
+* eo           Esperanto            379,288
+* he           Hebrew               387,475
+* zh-min-nan   Minnan               433,870
+* ms           Malay                435,174
+* sh           Serbo-Croatian       461,242
+* eu           Basque               477,121
+* ro           Romanian             518,851
+* hu           Hungarian            563,991
+* tt           Tatar                580,180
+* cs           Czech                582,242
+* fi           Finnish              609,370
+* tr           Turkish              655,663
+* no           Norwegian            662,720
+* ce           Chechen              693,426
+* sr           Serbian              713,863
+* ko           Korean               732,429
+* id           Indonesian           758,130
+* ca           Catalan              785,815
+* fa           Persian              1,064,671
+* pt           Portuguese           1,161,937
+* war          Waray                1,266,838
+* ar           Arabic               1,289,694
+* vi           Vietnamese           1,296,638
+* uk           Ukrainian            1,400,222
+* ja           Japanese             1,484,016
+* zh           Chinese              1,515,570
+* arz          Egyptian Arabic      1,629,983
+* pl           Polish               1,678,198
+* it           Italian              1,948,488
+* ru           Russian              2,075,931
+* es           Spanish              2,080,956
+* nl           Dutch                2,205,701
+* sv           Swedish              2,620,132
+* fr           French               2,726,164
+* de           German               3,078,401
+* ceb          Cebuano              6,115,868
+* en           English              7,106,828
+
+** global bots explicitly not allowed:
+
+* alt          Southern Altai       1,103
+* mnw          Mon                  1,966
+* ksh          Colognian            3,038
+* dv           Divehi               3,192
+* mt           Maltese              7,672
+* wuu          Wu                   47,074
+* fy           Western Frisian      58,825
+* is           Icelandic            60,907
+* nds          Low German           85,776
+* mr           Marathi              100,877
+* nn           Norwegian Nynorsk    177,017
+* bn           Bangla               178,738
+* sl           Slovenian            195,930
+* gl           Galician             228,344
+* ur           Urdu                 236,405
+* ro           Romanian             518,851
+* sr           Serbian              713,863
+* id           Indonesian           758,130
+* pt           Portuguese           1,161,937
+* vi           Vietnamese           1,296,638
+* uk           Ukrainian            1,400,222
+* pl           Polish               1,678,198
+* it           Italian              1,948,488
+* es           Spanish              2,080,956
+* fr           French               2,726,164
+* de           German               3,078,401
+
+
+######################################################
+######################################################
+** wikipedias with no clear bot policy
+
+* pwn          Paiwan                 376
+* din          Dinka                  372
+* ti           Tigrinya               335
+* pi           Pali                   291
+* nr           South Ndebele          279
+* bdr          West Coast Bajau       236
+* tly          Talysh                 10,060
+* rw           Kinyarwanda            8,917
+* bh           Bhojpuri               8,859
+* nso          Northern Sotho         8,783
+* ks           Kashmiri               8,446
+* vls          West Flemish           8,238
+* nds-nl       Low Saxon              8,067
+* mi           Māori                  8,018
+* se           Northern Sami          7,905
+* myv          Erzya                  7,867
+* mt           Maltese                7,672
+* mdf          Moksha                 7,616
+* bo           Tibetan                7,570
+* kw           Cornish                7,096
+* vep          Veps                   7,078
+* tk           Turkmen                7,055
+* gv           Manx                   7,051
+* kab          Kabyle                 7,010
+* fiu-vro      Võro                   6,880
+* gan          Gan                    6,815
+* smn          Inari Sami             6,508
+* ab           Abkhazian              6,480
