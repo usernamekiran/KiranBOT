@@ -205,6 +205,7 @@ edit_summaries = {
     "arc": "AMP-Tracking ܡܢ URLs ܡܢܝܬ ([[:m:User:KiranBOT/AMP|ܐܢܬܐ]]) ([[User talk:Usernamekiran|ܐܙܠ ܕܠܝܠ]]) v2.2.7r",
     "arz": "AMP-Tracking mn URLs itfrrdu ([[:m:User:KiranBOT/AMP|tafaṣṣīl]]) ([[User talk:Usernamekiran|tārīkh ϻałʿūṭ]]) v2.2.7r",
     "as": "AMP-Tracking URLs ৰ পৰা আঁতৰোৱা হৈছে ([[:m:User:KiranBOT/AMP|বিশদ]]) ([[User talk:Usernamekiran|ভুল প'ৰিবেশ]]) v2.2.7r",
+    "as": "Desaniciaos los parámetros de rastrexu AMP de les URL ([[:m:User:KiranBOT/AMP|detalles]]) ([[User talk:Usernamekiran|informar d'un error]]) v2.2.7r",
     "atj": "AMP-Tracking URL hite eskeri ([[:m:User:KiranBOT/AMP|detaylar]]) ([[User talk:Usernamekiran|hata raporlama]]) v2.2.7r",
     "av": "AMP-Tracking URL-lär hanalhiy ([[:m:User:KiranBOT/AMP|tağlar]]) ([[User talk:Usernamekiran|hataları raporlama]]) v2.2.7r",
     "avk": "AMP-Tracking URLs dan girlemişti ([[:m:User:KiranBOT/AMP|detallar]]) ([[User talk:Usernamekiran|hatalar bildirin]]) v2.2.7r",
