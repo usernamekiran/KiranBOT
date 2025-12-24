@@ -125,6 +125,7 @@ skip_url_patterns = [
         "t-camp.tamu.edu", "garrettcamp.com", "heswallcamp.org.uk", "witchcamp.org", "spacecamp.no",
         "objcamp.com", "procamps.com", "pbacamp.org", "samusicmag.co.za", "swedensocialwebcamp.com",
         "bloodybloodybiblecamp.com", "nationalradiochamp.com", "supercamp.com", "miznerparkamp.com", "thijsbroekkamp.com",
+        "cio.com",
     ]
 ]
 
@@ -137,6 +138,7 @@ exact_skip_urls = [
     r"^https?://(?:www\.)?foreign\.go\.tz/index\.php/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
     r"^https?://(?:www\.)?albertonews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
     r"^https?://(?:www\.)?bitlyanews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
+    r"^https?://(?:www\.)?cio\.com/article/2992634/google-takes-on-apple-news-facebook-instant-articles-with-amp\.html$"
 ]
 
 # skip the URLs containing following words anywhere
