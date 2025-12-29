@@ -2,6 +2,18 @@ import pywikibot
 from pywikibot import Site
 import re
 
+def is_exact_skip_url(url: str) -> bool:
+    return any(re.match(pattern, url) for pattern in exact_skip_urls)
+
+def is_skippable_url(url: str) -> bool:
+    if is_exact_skip_url(url):
+        return True
+    if any(re.match(pattern, url) for pattern in skip_url_patterns):
+        return True
+    if any(word in url.lower() for word in skippable_words):
+        return True
+    return False
+
 # define AMP keywords and path patterns
 AMP_KEYWORDS = [
     "/amp", "amp/", ".amp", "amp.", "?amp", "amp?", "=amp", "amp=",
@@ -161,27 +173,7 @@ archive_url_patterns = [
     r'(https?://[^\s|]*?/https?://[^\s|]+)',
 ]
 
-def is_exact_skip_url(url: str) -> bool:
-    # returns True if the URL exactly matches one of the exact_skip_urls regexes.
-    return any(re.match(pattern, url) for pattern in exact_skip_urls)
 
-
-def is_skippable_url(url):
-    # check if the given URL belongs to a skippable domain or contains certain keywords
-    # returns True if the URL should be skipped
-
-    if is_exact_skip_url(url):
-        return True
-
-    # check if the URL matches any predefined patterns (domains)
-    if any(re.match(pattern, url) for pattern in skip_url_patterns):
-        return True
-
-    # check if any skippable word is present in the URL (case-insensitive)
-    if any(word in url.lower() for word in skippable_words):
-        return True
-
-    return False
 def get_wiki_sites():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
     "en", "de", "es", "fr", "it", "pl", "pt", "id", "mr", "nn", "sl",
