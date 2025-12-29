@@ -138,7 +138,8 @@ skip_url_patterns = [
         "objcamp.com", "procamps.com", "pbacamp.org", "samusicmag.co.za", "swedensocialwebcamp.com",
         "bloodybloodybiblecamp.com", "nationalradiochamp.com", "supercamp.com", "miznerparkamp.com", "thijsbroekkamp.com",
         "cio.com", "camp.kg", "adventure-camp.com", "centralfriendscamp.org", "camp.kg",
-        "urcamp.edu.br", "cciamp.com", "sturtevantcamp.org", "nextgenchamp.com",
+        "urcamp.edu.br", "cciamp.com", "sturtevantcamp.org", "nextgenchamp.com", "vamp.ee",
+
     ]
 ]
 
