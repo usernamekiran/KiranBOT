@@ -31,6 +31,37 @@ PATH_PATTERNS = [
     r'/ampredir/', r'/amp-view/', r'/amp_embed/',
 ]
 
+exact_skip_urls = [
+    # exact matches for the URLs to skip (with or without www)
+    r"^https?://(?:www\.)?wdwinfo\.com/news-stories/amp-suit-decorated-with-holiday-theming-at-disneys-animal-kingdom/$",
+    r"^https?://(?:www\.)?padua-access\.stuttgart\.de/Access\.xhtml\?.*$",
+    r"^https?://(?:www\.)?adelaidenow\.com\.au/business/sa-business-journal/didier-elzingas-billion-dollar-tech-company-culture-amp-wants-to-make-work-better-for-all-of-us/news-story/265491a4c82d9aa9e4c5215b30320e13$",
+    r"^https?://(?:www\.)?foreign\.go\.tz/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
+    r"^https?://(?:www\.)?foreign\.go\.tz/index\.php/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
+    r"^https?://(?:www\.)?albertonews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
+    r"^https?://(?:www\.)?bitlyanews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
+    r"^https?://(?:www\.)?cio\.com/article/2992634/google-takes-on-apple-news-facebook-instant-articles-with-amp\.html$"
+]
+
+# skip the URLs containing following words anywhere
+skippable_words = {
+    "amplio", "ampel", "ampersand", "ampproject", "amp-project",
+    "webarchive", "amphan", "amphibian", "heitkamp", "basecamp",
+    "amphitheater", "obituaries",
+}
+
+archive_url_patterns = [
+    # archive-url variations
+    # covers de, en, es, fr, it, pl, pt, ar, nl, fi, eu, ast,
+    r'(\|\s*(archive-url|مسار أرشيف|مسار الأرشيف|archiveurl|urlarchivo|archiwum|archiv-url|urlarchivio|urlarquivo|arquivourl|arquivo-url|archiefurl|valinnainen|artxibo-url|urlarchivu)\s*=\s*)(https?://[^\s|]+)',
+
+    # match {{Webarchive | url= ... }} templates with variations
+    #r'(\{\{\s*Webarchive\s*\|\s*url\s*=\s*)(https?://[^\s|]+)', # this is now covered in main script
+
+    # urls that embed another URL after a slash
+    r'(https?://[^\s|]*?/https?://[^\s|]+)',
+]
+
 # list of url patterns to skip
 skip_url_patterns = [
     rf"^https?://(?:[\w.-]+\.)?{re.escape(domain)}(/.*)?$"
@@ -141,37 +172,6 @@ skip_url_patterns = [
         "urcamp.edu.br", "cciamp.com", "sturtevantcamp.org", "nextgenchamp.com", "vamp.ee",
 
     ]
-]
-
-exact_skip_urls = [
-    # exact matches for the URLs to skip (with or without www)
-    r"^https?://(?:www\.)?wdwinfo\.com/news-stories/amp-suit-decorated-with-holiday-theming-at-disneys-animal-kingdom/$",
-    r"^https?://(?:www\.)?padua-access\.stuttgart\.de/Access\.xhtml\?.*$",
-    r"^https?://(?:www\.)?adelaidenow\.com\.au/business/sa-business-journal/didier-elzingas-billion-dollar-tech-company-culture-amp-wants-to-make-work-better-for-all-of-us/news-story/265491a4c82d9aa9e4c5215b30320e13$",
-    r"^https?://(?:www\.)?foreign\.go\.tz/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
-    r"^https?://(?:www\.)?foreign\.go\.tz/index\.php/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
-    r"^https?://(?:www\.)?albertonews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
-    r"^https?://(?:www\.)?bitlyanews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
-    r"^https?://(?:www\.)?cio\.com/article/2992634/google-takes-on-apple-news-facebook-instant-articles-with-amp\.html$"
-]
-
-# skip the URLs containing following words anywhere
-skippable_words = {
-    "amplio", "ampel", "ampersand", "ampproject", "amp-project",
-    "webarchive", "amphan", "amphibian", "heitkamp", "basecamp",
-    "amphitheater", "obituaries",
-}
-
-archive_url_patterns = [
-    # archive-url variations
-    # covers de, en, es, fr, it, pl, pt, ar, nl, fi, eu, ast,
-    r'(\|\s*(archive-url|مسار أرشيف|مسار الأرشيف|archiveurl|urlarchivo|archiwum|archiv-url|urlarchivio|urlarquivo|arquivourl|arquivo-url|archiefurl|valinnainen|artxibo-url|urlarchivu)\s*=\s*)(https?://[^\s|]+)',
-
-    # match {{Webarchive | url= ... }} templates with variations
-    #r'(\{\{\s*Webarchive\s*\|\s*url\s*=\s*)(https?://[^\s|]+)', # this is now covered in main script
-
-    # urls that embed another URL after a slash
-    r'(https?://[^\s|]*?/https?://[^\s|]+)',
 ]
 
 
