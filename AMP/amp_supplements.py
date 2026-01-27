@@ -201,7 +201,7 @@ def get_wiki_sites_a():
         "lmo", "ky", "jv", "new", "pms", "lb", "io", "pa", "cv", "tl", "glk", "ig", "sco", "kn", "gu", "avk", "crh", "scn", "si", "qu",
         "os", "as", "or", "tum", "bat-smg", "gd", "yi", "ilo", "nap", "shn", "fo", "map-bms", "ie", "hyw", "ace", "sa", "km", "sn", "mhr", "shi",
         "mrj", "rue", "tly", "ug", "rw", "nso", "ks", "mi", "myv", "mt", "bo", "vep", "gv", "gan", "ab", "gn", "kv", "ay", "nrm", "fur",
-        "olo", "lfn", "lg", "stq", "tyv", "rm", "gom", "dsb", "tok", "bew", "gag", "haw", "blk", "szy", "pag", "inh", "atj", "mad", "om", "arc",
+        "olo", "lfn", "lg", "stq", "tyv", "rm", "gom", "dsb", "bew", "gag", "haw", "blk", "szy", "pag", "inh", "atj", "mad", "om", "arc",
         "iba", "fat", "jam", "anp", "fj", "nqo", "kg", "guw", "bi", "roa-rup", "jbo", "bbc", "mos", "syl", "lbe", "ss", "alt", "ny", "gcr", "chr",
         "ts", "bm", "rmy", "rn", "ik", "ch", "pnt", "sg", "iu",
 ]}
