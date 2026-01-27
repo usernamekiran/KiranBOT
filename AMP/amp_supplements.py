@@ -212,7 +212,7 @@ def get_wiki_sites_b():
         "da", "cy", "el", "sk", "azb", "ur", "gl", "sl", "ka", "bn", "nn", "mk", "lv", "af", "tg", "sq", "mg", "bs", "oc", "br",
         "nds", "ckb", "pnb", "ha", "vec", "ht", "ba", "ga", "su", "szl", "fy", "an", "wuu", "vo", "yo", "ban", "als", "ia",
         "bar", "mn", "bpy", "ps", "frr", "sd", "sah", "cdo", "bug", "am", "li", "gor", "sat", "eml", "dag", "ff", "wa", "hif", "zgh",
-        "zu", "bjn", "kaa", "mni", "hak", "pam", "so", "roa-tara", "bh", "co", "vls", "nds", "se", "sc", "mdf", "kw", "tk", "kab", "smn",
+        "zu", "bjn", "kaa", "mni", "hak", "pam", "so", "roa-tara", "bh", "co", "vls", "se", "sc", "mdf", "kw", "tk", "kab", "smn",
         "pcd", "frp", "udm", "csb", "lo", "pap", "lez", "tw", "ln", "mwl", "gpe", "ext", "lad", "tn", "koi", "fon", "cbk-zam", "dv", "ksh", "za",
         "bxr", "pfl", "krc", "awa", "xh", "pdc", "mnw", "ki", "nov", "nia", "wo", "dtp", "kbd", "xal", "st", "knc", "pcm", "tpi", "tet", "gur",
         "cu", "ee", "sm", "ami", "srn", "ltg", "rki", "rsk", "got", "igl", "ve", "chy", "guc", "ady", "nup", "tdd", "ann", "dz", "mzn", "skr",
