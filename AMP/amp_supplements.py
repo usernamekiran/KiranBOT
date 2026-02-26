@@ -175,6 +175,58 @@ skip_url_patterns = [
 ]
 
 
+def get_wiki_sites_a():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+        "en", "fr", "es", "pl", "ja", "ar", "fa", "ko", "no", "cs", "ro", "ms", "hy", "bg", "el", "et", "ur", "lt", "ka", "bn", "hi",
+        "lv", "te", "sq", "mr", "be-tarask", "nds", "ky", "ha", "pms", "mzn", "su", "pa", "tl", "ig", "sco", "gu", "crh", "scn", "qu",
+        "os", "ps", "sd", "cdo", "yi", "li", "shn", "fo", "ie", "ff", "sa", "km", "bjn", "shi", "hak", "tly", "rw", "co", "mi", "sc",
+        "kw", "gv", "smn", "gn", "udm", "lo", "fur", "tw", "lg", "stq", "lad", "gom", "fon", "gag", "bxr", "szy", "awa", "atj", "om",
+        "nov", "fat", "dtp", "fj", "st", "guw", "tpi", "gur", "mos", "sm", "srn", "rki", "chr", "igl", "rmy", "guc", "ch", "tdd", "iu",
+]}
+
+def get_wiki_sites_b():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+        "ceb", "sv", "ru", "arz", "uk", "war", "ca", "sr", "tr", "tt", "eu", "he", "uz", "cy", "be", "azb", "hr", "az", "lld", "th", "mk",
+        "ast", "tg", "sw", "ku", "br", "lmo", "pnb", "new", "vec", "ba", "io", "cv", "glk", "yo", "kn", "ia", "bar", "bpy", "skr", "bcl",
+        "frr", "tum", "gd", "am", "nap", "mai", "sat", "dag", "ace", "hif", "zu", "mhr", "mni", "rue", "so", "bh", "ks", "se", "mdf", "vep",
+        "kab", "ab", "frp", "csb", "nrm", "ln", "lfn", "mwl", "ext", "rm", "koi", "tok", "za", "blk", "krc", "inh", "pdc", "ki", "iba", "wo",
+        "anp", "xal", "kg", "pcm", "tet", "bbc", "ee", "lbe", "ltg", "gcr", "got", "bm", "chy", "ik", "nup", "sg", "dz",
+]}
+
+def get_wiki_sites_c():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+        "de", "nl", "it", "zh", "vi", "pt", "id", "ce", "fi", "hu", "sh", "eo", "da", "simple", "sk", "kk", "gl", "sl", "ta", "nn",
+        "la", "af", "my", "mg", "oc", "ml", "ckb", "jv", "ht", "lb", "ga", "szl", "an", "vo", "ban", "als", "avk", "mn", "si", "nv",
+        "as", "or", "sah", "bug", "ilo", "gor", "hsb", "eml", "hyw", "wa", "zgh", "sn", "kaa", "mrj", "pam", "ug", "nso", "vls", "myv",
+        "bo", "tk", "gan", "pcd", "kv", "ay", "pap", "olo", "lez", "gpe", "tyv", "tn", "dsb", "bew", "haw", "pfl", "pag", "xh", "mad",
+        "arc", "nia", "jam", "kbd", "nqo", "knc", "bi", "jbo", "cu", "syl", "ss", "ny", "rsk", "ts", "ve", "rn", "ady", "pnt", "ann",
+]}
+
+def get_wiki_sites_1():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+        "en", "de", "sv", "es", "it", "arz", "ja", "vi", "war", "fa", "id", "sr", "no", "fi", "tt", "ro", "sh", "zh-min-nan", "eo", "uz",
+        "bg", "simple", "be", "et", "kk", "hr", "lt", "lld", "ta", "th", "hi", "la", "ast", "te", "my", "sw", "mr", "ku", "be-tarask", "ml",
+        "lmo", "ky", "jv", "new", "pms", "lb", "io", "pa", "cv", "tl", "glk", "ig", "sco", "kn", "gu", "avk", "crh", "scn", "si", "qu",
+        "os", "as", "or", "tum", "bat-smg", "gd", "yi", "ilo", "nap", "shn", "fo", "map-bms", "ie", "hyw", "ace", "sa", "km", "sn", "mhr", "shi",
+        "mrj", "rue", "tly", "ug", "rw", "nso", "ks", "mi", "myv", "mt", "bo", "vep", "gv", "gan", "ab", "gn", "kv", "ay", "nrm", "fur",
+        "olo", "lfn", "lg", "stq", "tyv", "rm", "gom", "dsb", "bew", "gag", "haw", "blk", "szy", "pag", "inh", "atj", "mad", "om", "arc",
+        "iba", "fat", "jam", "anp", "fj", "nqo", "kg", "guw", "bi", "roa-rup", "jbo", "bbc", "mos", "syl", "lbe", "ss", "alt", "ny", "gcr", "chr",
+        "ts", "bm", "rmy", "rn", "ik", "ch", "pnt", "sg", "iu",
+]}
+
+def get_wiki_sites_2():
+    return {f"{code}wiki": Site(code, "wikipedia") for code in [
+        "ceb", "fr", "nl", "pl", "zh", "uk", "ar", "pt", "ca", "ko", "ce", "tr", "hu", "cs", "eu", "ms", "he", "hy",
+        "da", "cy", "el", "sk", "azb", "ur", "gl", "sl", "ka", "bn", "nn", "mk", "lv", "af", "tg", "sq", "mg", "bs", "oc", "br",
+        "nds", "ckb", "pnb", "ha", "vec", "ht", "ba", "ga", "su", "szl", "fy", "an", "wuu", "vo", "yo", "ban", "als", "ia",
+        "bar", "mn", "bpy", "ps", "frr", "sd", "sah", "cdo", "bug", "am", "li", "gor", "sat", "eml", "dag", "ff", "wa", "hif", "zgh",
+        "zu", "bjn", "kaa", "mni", "hak", "pam", "so", "roa-tara", "bh", "co", "vls", "se", "sc", "mdf", "kw", "tk", "kab", "smn",
+        "pcd", "frp", "udm", "csb", "lo", "pap", "lez", "tw", "ln", "mwl", "gpe", "ext", "lad", "tn", "koi", "fon", "cbk-zam", "dv", "ksh", "za",
+        "bxr", "pfl", "krc", "awa", "xh", "pdc", "mnw", "ki", "nov", "nia", "wo", "dtp", "kbd", "xal", "st", "knc", "pcm", "tpi", "tet", "gur",
+        "cu", "ee", "sm", "ami", "srn", "ltg", "rki", "rsk", "got", "igl", "ve", "chy", "guc", "ady", "nup", "tdd", "ann", "dz", "mzn", "skr",
+        "bcl", "hsb", "ru", "nv",
+    ]}
+
 def get_wiki_sites():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
     "en", "de", "es", "fr", "it", "pl", "pt", "id", "mr", "nn", "sl",
@@ -193,32 +245,6 @@ def get_wiki_sites():
     "ta", "tay", "tcy", "tet", "te", "tg", "th", "ti", "tk", "tl", "tly", "tn", "to", "tpi", "trv", "ts", "tt", "tum", "tw", "tyv", "ty",
     "udm", "ug", "uk", "uz", "vec", "vep", "ve", "vls", "vo", "wa", "war", "wo", "xal", "xh", "xmf", "yi", "yo", "za", "zea", "zh", "zgh", "zu",
 ]}
-
-def get_wiki_sites_a():
-    return {f"{code}wiki": Site(code, "wikipedia") for code in [
-        "en", "de", "sv", "es", "it", "arz", "ja", "vi", "war", "fa", "id", "sr", "no", "fi", "tt", "ro", "sh", "zh-min-nan", "eo", "uz",
-        "bg", "simple", "be", "et", "kk", "hr", "lt", "lld", "ta", "th", "hi", "la", "ast", "te", "my", "sw", "mr", "ku", "be-tarask", "ml",
-        "lmo", "ky", "jv", "new", "pms", "lb", "io", "pa", "cv", "tl", "glk", "ig", "sco", "kn", "gu", "avk", "crh", "scn", "si", "qu",
-        "os", "as", "or", "tum", "bat-smg", "gd", "yi", "ilo", "nap", "shn", "fo", "map-bms", "ie", "hyw", "ace", "sa", "km", "sn", "mhr", "shi",
-        "mrj", "rue", "tly", "ug", "rw", "nso", "ks", "mi", "myv", "mt", "bo", "vep", "gv", "gan", "ab", "gn", "kv", "ay", "nrm", "fur",
-        "olo", "lfn", "lg", "stq", "tyv", "rm", "gom", "dsb", "bew", "gag", "haw", "blk", "szy", "pag", "inh", "atj", "mad", "om", "arc",
-        "iba", "fat", "jam", "anp", "fj", "nqo", "kg", "guw", "bi", "roa-rup", "jbo", "bbc", "mos", "syl", "lbe", "ss", "alt", "ny", "gcr", "chr",
-        "ts", "bm", "rmy", "rn", "ik", "ch", "pnt", "sg", "iu",
-]}
-
-def get_wiki_sites_b():
-    return {f"{code}wiki": Site(code, "wikipedia") for code in [
-        "ceb", "fr", "nl", "pl", "zh", "uk", "ar", "pt", "ca", "ko", "ce", "tr", "hu", "cs", "eu", "ms", "he", "hy",
-        "da", "cy", "el", "sk", "azb", "ur", "gl", "sl", "ka", "bn", "nn", "mk", "lv", "af", "tg", "sq", "mg", "bs", "oc", "br",
-        "nds", "ckb", "pnb", "ha", "vec", "ht", "ba", "ga", "su", "szl", "fy", "an", "wuu", "vo", "yo", "ban", "als", "ia",
-        "bar", "mn", "bpy", "ps", "frr", "sd", "sah", "cdo", "bug", "am", "li", "gor", "sat", "eml", "dag", "ff", "wa", "hif", "zgh",
-        "zu", "bjn", "kaa", "mni", "hak", "pam", "so", "roa-tara", "bh", "co", "vls", "se", "sc", "mdf", "kw", "tk", "kab", "smn",
-        "pcd", "frp", "udm", "csb", "lo", "pap", "lez", "tw", "ln", "mwl", "gpe", "ext", "lad", "tn", "koi", "fon", "cbk-zam", "dv", "ksh", "za",
-        "bxr", "pfl", "krc", "awa", "xh", "pdc", "mnw", "ki", "nov", "nia", "wo", "dtp", "kbd", "xal", "st", "knc", "pcm", "tpi", "tet", "gur",
-        "cu", "ee", "sm", "ami", "srn", "ltg", "rki", "rsk", "got", "igl", "ve", "chy", "guc", "ady", "nup", "tdd", "ann", "dz", "mzn", "skr",
-        "bcl", "hsb", "ru", "nv",
-    ]}
-
 
 def get_wikinews_sites():
     return {f"{code}wiki": Site(code, "wikinews") for code in [
