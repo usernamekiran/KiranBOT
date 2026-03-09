@@ -189,10 +189,10 @@ def get_wiki_sites_b():
         "ceb", "sv", "ru", "arz", "uk", "war", "ca", "sr", "tr", "tt", "eu", "he", "uz", "cy", "be", "azb", "hr", "az", "lld", "th", "mk",
         "ast", "tg", "sw", "ku", "br", "lmo", "pnb", "new", "vec", "ba", "io", "cv", "glk", "yo", "kn", "ia", "bar", "bpy", "skr", "bcl",
         "frr", "tum", "gd", "am", "nap", "mai", "sat", "dag", "ace", "hif", "zu", "mhr", "mni", "rue", "so", "bh", "ks", "se", "mdf", "vep",
-        "kab", "ab", "frp", "csb", "nrm", "ln", "lfn", "mwl", "ext", "rm", "koi", "tok", "za", "blk", "krc", "inh", "pdc", "ki", "iba", "wo",
+        "kab", "ab", "frp", "csb", "nrm", "ln", "lfn", "mwl", "ext", "rm", "koi", "za", "blk", "krc", "inh", "pdc", "ki", "iba", "wo",
         "anp", "xal", "kg", "pcm", "tet", "bbc", "ee", "lbe", "ltg", "gcr", "got", "bm", "chy", "ik", "nup", "sg", "dz",
 ]}
-
+# tok not available in pywikibot
 def get_wiki_sites_c():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
         "de", "nl", "it", "zh", "vi", "pt", "id", "ce", "fi", "hu", "sh", "eo", "da", "simple", "sk", "kk", "gl", "sl", "ta", "nn",
