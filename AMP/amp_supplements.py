@@ -1,6 +1,22 @@
 import pywikibot
 from pywikibot import Site
 import re
+from urllib.parse import urlparse, urlunparse
+
+def normalise_url(url: str) -> str:
+    url = url.strip()
+    parsed = urlparse(url)
+
+    scheme = parsed.scheme.lower() if parsed.scheme else "https"
+    netloc = parsed.netloc.lower()
+
+    if netloc.startswith("www."):
+        netloc = netloc[4:]
+
+    path = parsed.path.rstrip("/")
+    query = parsed.query
+
+    return urlunparse((scheme, netloc, path, "", query, ""))
 
 def is_exact_skip_url(url: str) -> bool:
     return any(re.match(pattern, url) for pattern in exact_skip_urls)
@@ -13,6 +29,9 @@ def is_skippable_url(url: str) -> bool:
     if any(word in url.lower() for word in skippable_words):
         return True
     return False
+
+def is_exact_skip_url(url: str) -> bool:
+    return normalise_url(url) in exact_skip_urls_set
 
 # define AMP keywords and path patterns
 AMP_KEYWORDS = [
@@ -31,17 +50,20 @@ PATH_PATTERNS = [
     r'/ampredir/', r'/amp-view/', r'/amp_embed/',
 ]
 
-exact_skip_urls = [
-    # exact matches for the URLs to skip (with or without www)
-    r"^https?://(?:www\.)?wdwinfo\.com/news-stories/amp-suit-decorated-with-holiday-theming-at-disneys-animal-kingdom/$",
-    r"^https?://(?:www\.)?padua-access\.stuttgart\.de/Access\.xhtml\?.*$",
-    r"^https?://(?:www\.)?adelaidenow\.com\.au/business/sa-business-journal/didier-elzingas-billion-dollar-tech-company-culture-amp-wants-to-make-work-better-for-all-of-us/news-story/265491a4c82d9aa9e4c5215b30320e13$",
-    r"^https?://(?:www\.)?foreign\.go\.tz/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
-    r"^https?://(?:www\.)?foreign\.go\.tz/index\.php/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi$",
-    r"^https?://(?:www\.)?albertonews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
-    r"^https?://(?:www\.)?bitlyanews\.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/$",
-    r"^https?://(?:www\.)?cio\.com/article/2992634/google-takes-on-apple-news-facebook-instant-articles-with-amp\.html$"
-]
+exact_skip_urls_set = {
+    normalise_url("https://wdwinfo.com/news-stories/amp-suit-decorated-with-holiday-theming-at-disneys-animal-kingdom/"),
+    normalise_url("https://padua-access.stuttgart.de/Access.xhtml"),
+    normalise_url("https://adelaidenow.com.au/business/sa-business-journal/didier-elzingas-billion-dollar-tech-company-culture-amp-wants-to-make-work-better-for-all-of-us/news-story/265491a4c82d9aa9e4c5215b30320e13"),
+    normalise_url("https://foreign.go.tz/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi"),
+    normalise_url("https://foreign.go.tz/index.php/resources/view/waziri-mahiga-ampokea-mjumbe-maalum-kutoka-sahrawi"),
+    normalise_url("https://albertonews.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/"),
+    normalise_url("https://bitlyanews.com/principales/ultima-hora-venezuela-amplia-hasta-2050-el-periodo-establecido-para-operaciones-de-empresa-mixta-petrolera-con-chevron-detalles/"),
+    normalise_url("https://cio.com/article/2992634/google-takes-on-apple-news-facebook-instant-articles-with-amp.html"),
+    normalise_url("https://www.elnacional.com/2018/05/fallecio-paciente-amparada-por-medidas-cautelares-cidh_235127/"),
+    normalise_url("https://bitlysdowssl-aws.com/2018/05/fallecio-paciente-amparada-por-medidas-cautelares-cidh_235127/"),
+    normalise_url("https://www.elnacional.com/2021/11/quien-es-adolfo-superlano-el-dirigente-que-interpuso-el-amparo-que-impide-proclamacion-del-gobernador-de-barinas/"),
+    normalise_url("https://bitlysdowssl-aws.com/2021/11/quien-es-adolfo-superlano-el-dirigente-que-interpuso-el-amparo-que-impide-proclamacion-del-gobernador-de-barinas/"),
+}
 
 # skip the URLs containing following words anywhere
 skippable_words = {
@@ -356,6 +378,7 @@ edit_summaries = {
     "tl": "inalis ang pagsubaybay sa AMP sa mga URL ([[:m:User:KiranBOT/AMP|mga detalye]]) ([[User talk:Usernamekiran|mag-ulat ng error]]) v2.2.9s",
     "tr": "URL'lerden AMP izlemesi kaldırıldı ([[:m:User:KiranBOT/AMP|detaylar]]) ([[User talk:Usernamekiran|hata bildir]]) v2.2.9s",
     "uk": "видалено відстеження AMP з URL-адрес ([[:m:User:KiranBOT/AMP|деталі]]) ([[User talk:Usernamekiran|повідомити про помилку]]) v2.2.9s",
+    "ur": "یوآرایل سے اے ایم پی (AMP) ٹریکنگ کو حذف کر دیا گیا ہے: ([[:m:User:KiranBOT/AMP|مزید تفصیلات]]) ([[User talk:Usernamekiran|غلطی سے آگاہ کریں]]) نسخہ 2.2.9s",
     "uz": "URL manzillardan AMP kuzatuvi olib tashlandi ([[:m:User:KiranBOT/AMP|tafsilotlar]]) ([[User talk:Usernamekiran|xato haqida xabar bering]]) v2.2.9s",
     "vec": "cavà el tracciamento AMP dai URL ([[:m:User:KiranBOT/AMP|detaji]]) ([[User talk:Usernamekiran|segnałar un eror]]) v2.2.9s",
 }
