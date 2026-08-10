@@ -18,9 +18,6 @@ def normalise_url(url: str) -> str:
 
     return urlunparse((scheme, netloc, path, "", query, ""))
 
-def is_exact_skip_url(url: str) -> bool:
-    return any(re.match(pattern, url) for pattern in exact_skip_urls)
-
 def is_skippable_url(url: str) -> bool:
     if is_exact_skip_url(url):
         return True
