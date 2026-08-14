@@ -3,20 +3,19 @@ from pywikibot import Site
 import re
 from urllib.parse import urlparse, urlunparse
 
-def normalise_url(url: str) -> str:
-    url = url.strip()
-    parsed = urlparse(url)
+def normalise_url(url):
+    # normalise a URL by removing redundant slashes in the path
 
-    scheme = parsed.scheme.lower() if parsed.scheme else "https"
-    netloc = parsed.netloc.lower()
-
-    if netloc.startswith("www."):
-        netloc = netloc[4:]
-
-    path = parsed.path.rstrip("/")
-    query = parsed.query
-
-    return urlunparse((scheme, netloc, path, "", query, ""))
+    try:
+        parsed_url = urlparse(url)
+        # Remove duplicate slashes in the path
+        normalised_path = re.sub(r'\/+', '/', parsed_url.path)
+        # Rebuild the URL with the normalised path
+        normalised_url = urlunparse(parsed_url._replace(path=normalised_path))
+        return normalised_url
+    except Exception as e:
+        print(f"Error normalizing URL {url}: {e}")
+        return url  # Return the original URL if normalisation fails
 
 def is_skippable_url(url: str) -> bool:
     if is_exact_skip_url(url):
@@ -193,6 +192,9 @@ skip_url_patterns = [
     ]
 ]
 
+skip_url_patterns.append(
+    r"^https?://(?:[\w.-]+\.)?books\.google\.[\w.-]+(/.*)?$"
+)
 
 def get_wiki_sites_a():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
@@ -275,7 +277,7 @@ def get_wikinews_sites():
 # wikinews: shn,
 
 # dictionary of edit summaries for each wikipedia language
-default_summary = "removed AMP tracking from URLs ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|report error]]) v2.2.9s"
+default_summary = "removed AMP tracking from URLs ([[:m:User:KiranBOT/AMP|details]]) ([[User talk:Usernamekiran|report error]]) v3.1.1s"
 
 edit_summaries = {
     "en": default_summary,
