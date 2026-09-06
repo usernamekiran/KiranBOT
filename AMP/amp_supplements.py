@@ -5,17 +5,19 @@ from urllib.parse import urlparse, urlunparse
 
 def normalise_url(url):
     # normalise a URL by removing redundant slashes in the path
+    url = url.strip()
+    parsed = urlparse(url)
 
-    try:
-        parsed_url = urlparse(url)
-        # Remove duplicate slashes in the path
-        normalised_path = re.sub(r'\/+', '/', parsed_url.path)
-        # Rebuild the URL with the normalised path
-        normalised_url = urlunparse(parsed_url._replace(path=normalised_path))
-        return normalised_url
-    except Exception as e:
-        print(f"Error normalizing URL {url}: {e}")
-        return url  # Return the original URL if normalisation fails
+    scheme = parsed.scheme.lower() if parsed.scheme else "https"
+    netloc = parsed.netloc.lower()
+
+    if netloc.startswith("www."):
+        netloc = netloc[4:]
+
+    path = parsed.path.rstrip("/")
+    query = parsed.query
+
+    return urlunparse((scheme, netloc, path, "", query, ""))
 
 def is_skippable_url(url: str) -> bool:
     if is_exact_skip_url(url):
