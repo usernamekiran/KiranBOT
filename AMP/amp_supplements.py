@@ -180,8 +180,8 @@ skip_url_patterns = [
         "cio.com", "camp.kg", "adventure-camp.com", "centralfriendscamp.org", "camp.kg",
         "urcamp.edu.br", "cciamp.com", "sturtevantcamp.org", "nextgenchamp.com", "vamp.ee",
         "workramp.com", "austinchamp.com", "madacamp.com", "espelkamp.de", "nbcamp.net",
-        "strummercamp.co.uk", "gaycamp.se", "longkamp.de",
-
+        "strummercamp.co.uk", "longkamp.de", "fedramp.gov", "miraclecamp.com", "lifechangecamp.org",
+        "gaycamp.se",
     ]
 ]
 
@@ -373,4 +373,5 @@ edit_summaries = {
     "ur": "یوآرایل سے اے ایم پی (AMP) ٹریکنگ کو حذف کر دیا گیا ہے: ([[:m:User:KiranBOT/AMP|مزید تفصیلات]]) ([[User talk:Usernamekiran|غلطی سے آگاہ کریں]]) نسخہ 2.2.9s",
     "uz": "URL manzillardan AMP kuzatuvi olib tashlandi ([[:m:User:KiranBOT/AMP|tafsilotlar]]) ([[User talk:Usernamekiran|xato haqida xabar bering]]) v3.1.1-current",
     "vec": "cavà el tracciamento AMP dai URL ([[:m:User:KiranBOT/AMP|detaji]]) ([[User talk:Usernamekiran|segnałar un eror]]) v3.1.1-current",
+    "vi": "Đã loại bỏ tính năng theo dõi AMP khỏi các URL ([[:m:User:KiranBOT/AMP|chi tiết]]) ([[User talk:Usernamekiran|Báo cáo lỗi]]) v3.1.1-current",
 }
