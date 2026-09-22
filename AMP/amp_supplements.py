@@ -55,7 +55,7 @@ exact_skip_urls_set = {
 skippable_words = {
     "amplio", "ampel", "ampersand", "ampproject", "amp-project",
     "webarchive", "amphan", "amphibian", "heitkamp", "basecamp",
-    "amphitheater", "obituaries",
+    "amphitheater", "obituaries", "amphibisches",
 }
 
 archive_url_patterns = [
@@ -181,7 +181,8 @@ skip_url_patterns = [
         "urcamp.edu.br", "cciamp.com", "sturtevantcamp.org", "nextgenchamp.com", "vamp.ee",
         "workramp.com", "austinchamp.com", "madacamp.com", "espelkamp.de", "nbcamp.net",
         "strummercamp.co.uk", "longkamp.de", "fedramp.gov", "miraclecamp.com", "lifechangecamp.org",
-        "gaycamp.se",
+        "gaycamp.se", "viva.co.id", "trackcyclingcamp.com", "richardvancamp.org", "phiphidivecamp.com",
+        "ekoamp.com", "champ.games",
     ]
 ]
 
