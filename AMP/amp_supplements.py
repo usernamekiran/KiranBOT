@@ -3,6 +3,7 @@ from pywikibot import Site
 import re
 from urllib.parse import urlparse, urlunparse
 
+# amp_supplements.py
 
 def normalise_url(url): #minimal normalisation to match with URL present in the source
     return url.strip()
@@ -10,7 +11,7 @@ def normalise_url(url): #minimal normalisation to match with URL present in the 
 def is_skippable_url(url: str) -> bool:
     if is_exact_skip_url(url):
         return True
-    if any(re.match(pattern, url) for pattern in skip_url_patterns):
+    if any(pattern.match(url) for pattern in compiled_skip_url_patterns):
         return True
     if any(word in url.lower() for word in skippable_words):
         return True
@@ -182,13 +183,19 @@ skip_url_patterns = [
         "workramp.com", "austinchamp.com", "madacamp.com", "espelkamp.de", "nbcamp.net",
         "strummercamp.co.uk", "longkamp.de", "fedramp.gov", "miraclecamp.com", "lifechangecamp.org",
         "gaycamp.se", "viva.co.id", "trackcyclingcamp.com", "richardvancamp.org", "phiphidivecamp.com",
-        "ekoamp.com", "champ.games",
+        "ekoamp.com", "champ.games", "frenchcamp.org", "johnmellencamp.com", "freedcamp.com",
+        "villeguingamp.bzh",
     ]
 ]
 
 skip_url_patterns.append(
     r"^https?://(?:[\w.-]+\.)?books\.google\.[\w.-]+(/.*)?$"
 )
+
+compiled_skip_url_patterns = [
+    re.compile(pattern)
+    for pattern in skip_url_patterns
+]
 
 def get_wiki_sites_a():
     return {f"{code}wiki": Site(code, "wikipedia") for code in [
