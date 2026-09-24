@@ -20,6 +20,20 @@ def is_skippable_url(url: str) -> bool:
 def is_exact_skip_url(url: str) -> bool:
     return normalise_url(url) in exact_skip_urls_set
 
+def is_error_page_url(url):
+    if not url:
+        return False
+
+    path = urlparse(url).path.lower().rstrip("/")
+
+    error_patterns = [
+        r'/page[-_]?not[-_]?found$',
+        r'/not[-_]?found$',
+        r'/404$',
+    ]
+
+    return any(re.search(pattern, path) for pattern in error_patterns)
+
 # define AMP keywords and path patterns
 AMP_KEYWORDS = [
     "/amp", "amp/", ".amp", "amp.", "?amp", "amp?", "=amp", "amp=",
