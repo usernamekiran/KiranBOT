@@ -46,7 +46,7 @@ AMP_KEYWORDS = [
 PATH_PATTERNS = [
     r'/amp/', r'-amp/', r'/amp-', r'-amp', r'/amphtml/', r'-amphtml',
     r'amp_articleshow', r'-amp(\.html|\.php|\.asp|\.htm|_section)?$',
-    r'_amp(\.html|\.php)?$', r'amp_articleshow', r'/ampRFA$',
+    r'_amp(\.html|\.php)?$', r'amp-articleshow', r'/ampRFA$',
     r'/amp-page/?$', r'\.amp\.html$', r'/amp\.[a-z]+$', r'/amp_js_v[0-9]+',
     r'/ampredir/', r'/amp-view/', r'/amp_embed/',
 ]
